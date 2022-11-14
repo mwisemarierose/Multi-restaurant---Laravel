@@ -19,12 +19,14 @@ class OrderController extends Controller
     
     public function store(Request $request)
     {
+        $me=menu::find($request-> menu_id);
+        $amount=$me->Price*$request->quantity;
         $createOrder = Order::create([
             'user_id'=>$request->user_id,
             'menu_id'=> $request-> menu_id,
             'quantity'=>$request->quantity,
-            'amount'=>$request->amount,
-            'status' => $request -> status
+            'amount'=>$amount,
+            'status' => 'pending'
         ]);
         return $createOrder;
     }

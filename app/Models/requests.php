@@ -12,7 +12,7 @@ class requests extends Model
         'Name',
         'Email',
         'Address',
-        'Description'
-        
+        'Description',
+        'Status'
     ];
 }

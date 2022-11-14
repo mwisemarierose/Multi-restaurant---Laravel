@@ -15,6 +15,7 @@ class Usercontroller extends Controller
         $createUser = User::create([
             'username'=>$request->username,
             'email'=>$request->email,
+            'role' => 'client ',
             'password'=>Hash::make($request->password)
         ]);
         return $createUser;
@@ -26,6 +27,7 @@ class Usercontroller extends Controller
         $loginUser = $request-> validate([
             'email' => 'required|string',
             'password' => 'required|string',
+            
         ]);
         $user = User :: where('email', $loginUser['email'])-> first();
         if(!$user || !Hash:: check($loginUser['password'], $user -> password)){
@@ -43,6 +45,7 @@ class Usercontroller extends Controller
 
         $users = User::all();
         return $users;
+        
     }
     
     public function show($id){

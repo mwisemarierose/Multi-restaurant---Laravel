@@ -10,12 +10,11 @@ class menuController extends Controller
 {   
     public function store(Request $request){
 
-        // $imageUrl = cloudinary()->upload($request->file('Image')->getRealPath())->getSecurePath();
+        $imageUrl = cloudinary()->upload($request->file('Image')->getRealPath())->getSecurePath();
         $item = menu::create([
             'Title' => $request -> Title,
             'Description' => $request -> Description,
-            'Image' => $request -> Image,
-            // 'Image' => $imageUrl,
+            'Image' => $imageUrl,
             'Price' =>$request -> Price,
             'user_id'=>$request -> user_id,
            

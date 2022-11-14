@@ -17,7 +17,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('/users',userController::class);
+Route::post("/users/login",[Usercontroller::class, 'login']);
+
+
+Route::patch('/requests/approve/{id}',[requestsController::class,'approveRequest']);
+Route::patch('/requests/reject/{id}', [requestsController::class,'rejectRequest']);
+Route::get('/requests/approved',    [requestsController::class,'approvedRequest']);
 Route::resource('/requests',requestsController::class);
+
+
 Route::resource('/menu',menuController::class);
 Route::resource('/order',orderController::class);
 

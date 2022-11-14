@@ -18,8 +18,8 @@ return new class extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('menu_id');
-            $table->string('quantity');
-            $table->string('amount');
+            $table->integer('quantity');
+            $table->integer('amount');
             $table->string('status');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('menu_id')->references('id')->on('menus')->onDelete('cascade');
