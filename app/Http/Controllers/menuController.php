@@ -39,17 +39,15 @@ class menuController extends Controller
     }
 
     public function update(Request $request,$id){
-        $item = menu::find($id);
+        $Menu = menu::find($id);
         $input = $request->all();
-        $item-> update($input);
-        return $item;
+        $Menu-> update($input);
+        return $Menu;
     }
 
-    // public function getUsermenu($userId){
-    //     $items = User::find($userId)->items;
-    //     foreach($items as $item){
-    //       $item = menu::all();
-    //       return $item;
-    //     }
-    // }
+    public function getUsermenu($userId){
+       $items = menu::where('user_id',$userId)->get();
+        return $items;
+        
+    }
 }

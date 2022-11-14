@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\requests;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class requestsController extends Controller
 {
@@ -54,10 +56,10 @@ class requestsController extends Controller
     }
 
     public function destroy($id){
-        $partner = requests::destroy($id);
+        $request = requests::destroy($id);
         $res = [
-            'message' => 'Request deleted successfully',
-            'data' => $partner
+            'message' => 'Request deleted successfully'
+            
         ];
         return Response()->json($res, 200);
 
@@ -69,15 +71,31 @@ class requestsController extends Controller
         $requests -> update($input);
         $res = [
             'message' => 'Request Updated successfully',
-            'data' => $input
+            'data' => $requests
         ];
         return Response()->json($res, 200);
 
     }
+   
     public function approveRequest($id){
         $requests = requests::find($id);
         $requests->Status="Approved";
         $requests->save();
+
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < 8; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        $password=$randomString;
+
+        $createUser = User::create([
+            'username'=>$requests->Name,
+            'email'=>$requests->Email,
+            'role' => 'Manager ',
+            'password'=>Hash::make($password)
+        ]);
         $res = [
             'message' => 'Request Approved successfully',
             'data' => $requests
@@ -99,6 +117,11 @@ class requestsController extends Controller
 
     public function approvedRequest(){
         $approved= requests::where('Status','Approved')->get();
+        return $approved;
+        
+    }
+    public function rejectedRequest(){
+        $approved= requests::where('Status','Rejected')->get();
         return $approved;
         
     }

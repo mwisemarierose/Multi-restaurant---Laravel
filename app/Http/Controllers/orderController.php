@@ -13,7 +13,12 @@ class OrderController extends Controller
     
     public function index()
     {
-        //
+        $order = Order::all();
+        $res = [
+            'message' => 'Retrieved',
+            'data' => $order
+        ];
+        return Response()->json($res, 200);
     }
 
     
@@ -28,23 +33,36 @@ class OrderController extends Controller
             'amount'=>$amount,
             'status' => 'pending'
         ]);
-        return $createOrder;
+        $res = [
+            'message' => 'Order created successfully',
+            'data' => $createOrder
+        ];
+        return Response()->json($res, 200);
     }
+    
 
     public function show($id)
     {
-        //
+        $order = Order::find($id);
+        return $order;
     }
 
    
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request,$id){
+        $order = Order::find($id);
+        $input = $request->all();
+        $order-> update($input);
+        return $order;
     }
 
     
     public function destroy($id)
     {
-        //
+        $order = requests::destroy($id);
+        $res = [
+            'message' => 'Order deleted successfully',
+            'data' => $order
+        ];
+        return Response()->json($res, 200);
     }
 }
