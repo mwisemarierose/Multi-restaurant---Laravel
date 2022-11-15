@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pages / Login - NiceAdmin Bootstrap Template</title>
+  <title>Pages / Register - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{URL::asset('img/favicon.png');}}" rel="icon">
-  <link href="{{URL::asset('img/apple-touch-icon.png');}}" rel="apple-touch-icon">
+  <link href="{{ URL::asset('img/favicon.png');}}" rel="icon">
+  <link href="{{ URL::asset('img/apple-touch-icon.png');}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -26,10 +25,9 @@
   <link href="{{URL::asset('vendor/quill/quill.bubble.css');}}" rel="stylesheet">
   <link href="{{URL::asset('vendor/remixicon/remixicon.css');}}" rel="stylesheet">
   <link href="{{URL::asset('vendor/simple-datatables/style.css');}}" rel="stylesheet">
-  
 
   <!-- Template Main CSS File -->
-  <link rel="stylesheet" href="{{URL::asset('css/style.css');}}">
+  <link href="{{URL::asset('css/style.css');}}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.4.1
@@ -51,7 +49,7 @@
 
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo d-flex align-items-center w-auto">
-                  <img src="assets/img/logo.png" alt="">
+                  <img src="{{URL::asset('img/logo.png');}}" alt="">
                   <span class="d-none d-lg-block"><strong>FineFood</strong></span>
                 </a>
               </div><!-- End Logo -->
@@ -61,38 +59,52 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4"><strong>Welcome Back</strong></h5>
-                    <p class="text-center small">to FineFood!!</p>
+                    <h5 class="card-title text-center pb-0 fs-4"><strong>Get started with us</strong></h5>
+                    <p class="text-center small">FineFood</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" action="/users/login" method="POST" >
-{{csrf_field()}}
-                    <div class="col-12">
-                      <label for="yourUsername" class="form-label">Email</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="email" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please enter your username.</div>
-                      </div>
-                    </div>
+                  <form class="row g-3 needs-validation" action="requests/store" method="POST">
+                  {{csrf_field()}}
+                    
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Please enter your password!</div>
+                      <label for="yourUsername" class="form-label">Restaurant Name</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" name="Name" class="form-control" id="yourUsername" required>
+                        <div class="invalid-feedback">Please choose a Restaurant Name.</div>
+                      </div>
+                      <div class="col-12">
+                      <label for="yourEmail" class="form-label">Restaurant Email</label>
+                      <input type="email" name="Email" class="form-control" id="yourEmail" required>
+                      <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
+                    <div class="col-12">
+                      <label for="yourEmail" class="form-label">Address</label>
+                      <input type="test" name="Address" class="form-control" id="yourEmail" required>
+                      <div class="invalid-feedback">Please enter your location adddress!</div>
+                    </div>
+                    <div class="col-12">
+                      <label for="yourEmail" class="form-label">Description</label>
+                      <textarea name="Description" class="form-control" id="yourEmail" required></textarea>
+                      <div class="invalid-feedback">Please tell us who you are</div>
+                    </div>
+                    </div>
+
+
 
                     <div class="col-12">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                        <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
+                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
+                        <div class="invalid-feedback">You must agree before submitting.</div>
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Login</button>
+                      <button class="btn btn-primary w-100" type="submit">Send Request</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Don't have account? <a href="/register">Create an account</a></p>
+                      <p class="small mb-0">Already have an account? <a href="/login">Log in</a></p>
                     </div>
                   </form>
 

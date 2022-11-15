@@ -19,13 +19,15 @@ use App\Http\Controllers\orderController;
 */
 
 
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('frontend.login');
 });
 Route::get('/register', function () {
     return view('frontend.register');
 });
-
+Route::get('/request', function () {
+    return view('frontend.request');
+});
 
 
 
@@ -40,6 +42,7 @@ Route::post("/users/login",[UserController::class, 'login']);
 Route::post("/users/store",[UserController::class, 'store']);
 
 
+Route::post('/requests/store',[requestsController::class,'store']);
 
 Route::patch('/requests/approve/{id}',[requestsController::class,'approveRequest']);
 Route::patch('/requests/reject/{id}', [requestsController::class,'rejectRequest']);
