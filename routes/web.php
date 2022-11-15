@@ -18,11 +18,12 @@ use App\Http\Controllers\orderController;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/login', function () {
     return view('frontend.login');
+});
+Route::get('/register', function () {
+    return view('frontend.register');
 });
 
 
@@ -36,6 +37,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('/users',UserController::class);
 Route::post("/users/login",[UserController::class, 'login']);
+Route::post("/users/store",[UserController::class, 'store']);
+
 
 
 Route::patch('/requests/approve/{id}',[requestsController::class,'approveRequest']);

@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\userController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\requestsController;
 use App\Http\Controllers\menuController;
 use App\Http\Controllers\orderController;
@@ -16,8 +16,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 });
 
-Route::resource('/users',userController::class);
-Route::post("/users/login",[userController::class, 'login']);
+Route::resource('/users',UserController::class);
+Route::post("/users/login",[UserController::class, 'login']);
 
 
 Route::patch('/requests/approve/{id}',[requestsController::class,'approveRequest']);
