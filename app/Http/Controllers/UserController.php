@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Facades\Mail;
+use App\mail\MailNotify;
 
 class Usercontroller extends Controller
 {
@@ -18,6 +19,11 @@ class Usercontroller extends Controller
             'role' => 'client ',
             'password'=>Hash::make($request->password)
         ]);
+        $data = [
+            'subject'=>'Electronics shop mail',
+            'body'=>'this is the email test'
+        ];
+        Mail::to($request['email'])->send(new MailNotify($data));
         return $createUser;
 
     }
