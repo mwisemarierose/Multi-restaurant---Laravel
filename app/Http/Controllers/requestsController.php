@@ -6,6 +6,8 @@ use App\Models\requests;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use App\mail\MailNotify;
 
 class requestsController extends Controller
 {
@@ -19,6 +21,12 @@ class requestsController extends Controller
             'Description'=>$request->Description,
             'Status' => 'Pending'
         ]);
+
+        // $data = [
+        //     'subject'=>'Electronics shop mail',
+        //     'body'=>'this is the email test'
+        // ];
+        // Mail::to($request['Email'])->send(new MailNotify($data));
         $res = [
             'message' => 'request Created Successfully',
             'data' => $createRequests
