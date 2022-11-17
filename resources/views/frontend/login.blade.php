@@ -29,7 +29,7 @@
   
 
   <!-- Template Main CSS File -->
-  <link rel="stylesheet" href="{{URL::asset('css/style.css');}}">
+  <link rel="stylesheet" href="{{URL::asset('/css/style.css');}}">
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.4.1

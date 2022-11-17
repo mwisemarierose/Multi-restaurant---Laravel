@@ -19,6 +19,9 @@ use App\Http\Controllers\orderController;
 */
 
 
+Route::get('/', function () {
+    return view('home');
+});
 Route::get('/login', function () {
     return view('frontend.login');
 });
@@ -27,6 +30,12 @@ Route::get('/register', function () {
 });
 Route::get('/request', function () {
     return view('frontend.request');
+});
+Route::get('/restaurants', function () {
+    return view('restaurants');
+});
+Route::get('/Restaurant_menu', function () {
+    return view('frontend.Restaurant_menu');
 });
 
 
