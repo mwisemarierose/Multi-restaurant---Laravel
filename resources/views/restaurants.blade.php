@@ -66,15 +66,14 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#menu">Restaurants</a></li>
-          <li><a class="nav-link scrollto" href="#specials">Request</a></li>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/restaurants">Restaurants</a></li>
+          <li><a class="nav-link scrollto" href="/request">Request</a></li>
          
            
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
+      <a href="/login" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
 
     </div>
   </header><!-- End Header -->
@@ -86,8 +85,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Why Us</h2>
-          <p>Why Choose Our Restaurant</p>
+          <p>Our Restaurants</p>
         </div>
 
         <div class="row">
@@ -97,6 +95,8 @@
               <span>01</span>
               <h4>Lorem Ipsum</h4>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+      <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
+
             </div>
           </div>
 
@@ -105,6 +105,8 @@
               <span>02</span>
               <h4>Repellat Nihil</h4>
               <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+      <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
+              
             </div>
           </div>
 
@@ -113,6 +115,8 @@
               <span>03</span>
               <h4> Ad ad velit qui</h4>
               <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+      <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
+            
             </div>
           </div>
 
@@ -129,12 +133,12 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Restaurantly</h3>
+              <h3>FineFood</h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                Kigali-Rwanda<br>
+                kST 202 Kiyovu<br><br>
+                <strong>Phone:</strong> +250 788 888 888<br>
+                <strong>Email:</strong> info@finefood.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -149,10 +153,10 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/restaurants">Restaurants</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/request">Request</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
@@ -160,22 +164,13 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Food Delivering</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Hosting some Events</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Reservation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">cooperate with many Restaurants</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cooking Lessons</a></li>
             </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
+        </div>
 
         </div>
       </div>
@@ -183,14 +178,14 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Restaurantly</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>FineFood</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        
       </div>
     </div>
   </footer><!-- End Footer -->

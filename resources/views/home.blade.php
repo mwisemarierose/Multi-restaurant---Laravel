@@ -66,8 +66,7 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#">About</a></li>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/restaurants">Restaurants</a></li>
           <li><a class="nav-link scrollto" href="/request">Request</a></li>
          
