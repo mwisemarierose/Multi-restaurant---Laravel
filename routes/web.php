@@ -20,9 +20,9 @@ Route::get('/register', function () {
 Route::get('/request', function () {
     return view('frontend.accounts.request');
 });
-Route::get('/restaurants', function () {
-    return view('frontend.restaurant.restaurants');
-});
+// Route::get('/restaurants', function () {
+//     return view('frontend.restaurant.restaurants');
+// });
 Route::get('/Restaurant_menu', function () {
     return view('frontend.restaurant.Restaurant_menu');
 });

@@ -13,6 +13,7 @@ class menu extends Model
         'Title',
         'Description',
         'Image',
+        'quantity',
         'Price',
         'user_id'
 ];

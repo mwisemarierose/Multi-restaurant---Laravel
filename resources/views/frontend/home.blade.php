@@ -27,13 +27,6 @@
 
   <!-- Template Main CSS File -->
   <link href="{{URL::asset('assets/css/style.css');}}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Restaurantly - v3.9.1
-  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -67,7 +60,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="/">Home</a></li>
-          <li><a class="nav-link scrollto" href="/restaurants">Restaurants</a></li>
+          <li><a class="nav-link scrollto" href="/requests/approved">Restaurants</a></li>
           <li><a class="nav-link scrollto" href="/request">Request</a></li>
          
            
@@ -87,7 +80,7 @@
           <h2>We cooperate with many Restaurants to serve you delicious foods!</h2>
 
           <div class="btns">
-            <a href="/restaurants" class="btn-menu animated fadeInUp scrollto">Our Restaurants</a>
+            <a href="/requests/approved" class="btn-menu animated fadeInUp scrollto">Our Restaurants</a>
             <a href="/login" class="btn-book animated fadeInUp scrollto">LogIn</a>
           </div>
         </div>

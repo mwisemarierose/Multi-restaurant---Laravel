@@ -13,10 +13,11 @@ class requestsController extends Controller
 {
     
     public function store(Request $request){
-
+        $imageUrl = cloudinary()->upload($request->file('Image')->getRealPath())->getSecurePath();
         $createRequests = requests::create([
             'Name'=>$request->Name,
             'Email'=>$request->Email,
+            'Image' => $imageUrl,
             'Address'=>$request->Address,
             'Description'=>$request->Description,
             'Status' => 'Pending'
@@ -125,7 +126,7 @@ class requestsController extends Controller
 
     public function approvedRequest(){
         $approved= requests::where('Status','Approved')->get();
-        return $approved;
+        return view('frontend.restaurant.restaurants')->with('restaurants',$approved);
         
     }
     public function rejectedRequest(){

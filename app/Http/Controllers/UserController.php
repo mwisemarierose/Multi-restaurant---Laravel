@@ -19,11 +19,11 @@ class Usercontroller extends Controller
             'role' => 'client ',
             'password'=>Hash::make($request->password)
         ]);
-        $data = [
-            'subject'=>'Electronics shop mail',
-            'body'=>'this is the email test'
-        ];
-        Mail::to($request['email'])->send(new MailNotify($data));
+        // $data = [
+        //     'subject'=>'Electronics shop mail',
+        //     'body'=>'this is the email test'
+        // ];
+        // Mail::to($request['email'])->send(new MailNotify($data));
         return $createUser;
 
     }

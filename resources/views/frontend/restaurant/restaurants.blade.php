@@ -56,7 +56,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="/">Home</a></li>
-          <li><a class="nav-link scrollto active" href="/restaurants">Restaurants</a></li>
+          <li><a class="nav-link scrollto active" href="/requests/approved">Restaurants</a></li>
           <li><a class="nav-link scrollto" href="/request">Request</a></li>
          
            
@@ -72,56 +72,28 @@
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <p>Our Restaurants</p>
         </div>
-
+        @foreach($restaurants as $restaurant)
         <div class="row">
-
+        
           <div class="col-lg-4">
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
-              <span>01</span>
+              <span>{{$restaurant->id}}</span>
               <div class="resto-photo"> 
-              <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+              <img src="{{$restaurant->Image}}" class="menu-img" alt="">
               </div>
-              <h4>Lorem Ipsum</h4>
+              <h4>{{$restaurant->Name}}</h4>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-      <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
-
+               <a href="/menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
             </div>
+         
           </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="200">
-              <span>02</span>
-              <div class="resto-photo"> 
-              <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
-              </div>
-              <h4>Repellat Nihil</h4>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-      <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
-              
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="300">
-              <span>03</span>
-              <div class="resto-photo"> 
-              <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
-              </div>
-              <h4> Ad ad velit qui</h4>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-      <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
-            
-            </div>
-          </div>
-
+          @endforeach 
         </div>
-
       </div>
-    </section><!-- End Why Us Section -->
+    </section>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -192,15 +164,15 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{asset('assets/js/main.js')}}"></script>
 
 </body>
 

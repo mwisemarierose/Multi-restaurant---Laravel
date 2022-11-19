@@ -17,14 +17,14 @@ class menuController extends Controller
             'Image' => $imageUrl,
             'Price' =>$request -> Price,
             'user_id'=>$request -> user_id,
-           
+            'quantity' =>$request ->quantity
         ]);
         return $item;
     }
 
     public function index(){
         $items = menu::all();
-        return $items;
+        return view('frontend.restaurant.restaurant_menu')->with('items',$items);
     }
     
     public function show($id){
@@ -48,6 +48,5 @@ class menuController extends Controller
     public function getUsermenu($userId){
        $items = menu::where('user_id',$userId)->get();
         return $items;
-        
     }
 }
