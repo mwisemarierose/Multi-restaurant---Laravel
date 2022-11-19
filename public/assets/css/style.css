@@ -1768,3 +1768,13 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+/*photo of restaurants*/
+
+.resto-photo img{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: 10px solid white;
+  margin-left: 25px;
+}

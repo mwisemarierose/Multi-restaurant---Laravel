@@ -93,6 +93,9 @@
           <div class="col-lg-4">
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
               <span>01</span>
+              <div class="resto-photo"> 
+              <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+              </div>
               <h4>Lorem Ipsum</h4>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
       <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
@@ -103,6 +106,9 @@
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in" data-aos-delay="200">
               <span>02</span>
+              <div class="resto-photo"> 
+              <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+              </div>
               <h4>Repellat Nihil</h4>
               <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
       <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
@@ -113,6 +119,9 @@
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in" data-aos-delay="300">
               <span>03</span>
+              <div class="resto-photo"> 
+              <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+              </div>
               <h4> Ad ad velit qui</h4>
               <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
       <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>

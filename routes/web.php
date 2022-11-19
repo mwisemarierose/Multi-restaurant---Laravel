@@ -9,27 +9,32 @@ use App\Http\Controllers\orderController;
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('frontend.home');
 });
 Route::get('/login', function () {
-    return view('frontend.login');
+    return view('frontend.accounts.login');
 });
 Route::get('/register', function () {
-    return view('frontend.register');
+    return view('frontend.accounts.register');
 });
 Route::get('/request', function () {
-    return view('frontend.request');
+    return view('frontend.accounts.request');
 });
 Route::get('/restaurants', function () {
-    return view('restaurants');
+    return view('frontend.restaurant.restaurants');
 });
 Route::get('/Restaurant_menu', function () {
-    return view('frontend.Restaurant_menu');
+    return view('frontend.restaurant.Restaurant_menu');
 });
 Route::get('/Admin', function () {
-    return view('dashboard.admindash');
+    return view('frontend.dashboard.admindash');
 });
-
+Route::get('/usertable', function () {
+    return view('frontend.dashboard.tables.usertable');
+});
+Route::get('/profile', function () {
+    return view('frontend.dashboard.userProfile.Userprofile');
+});
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
