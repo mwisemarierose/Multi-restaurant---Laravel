@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pages / Register - NiceAdmin Bootstrap Template</title>
+  <title> Request </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -50,9 +50,9 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-        <li><a class="nav-link scrollto active" href="/">Home</a></li>
+        <li><a class="nav-link scrollto " href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/restaurants">Restaurants</a></li>
-          <li><a class="nav-link scrollto" href="/request">Request</a></li>
+          <li><a class="nav-link scrollto active" href="/request">Request</a></li>
          
          
            

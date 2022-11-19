@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Tables / General - FineFood Bootstrap Template</title>
+  <title>User Table</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,7 +51,7 @@
     </div><!-- End Logo -->
 
     <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
+      <form class="search-form d-flex align-items-center" method="GET" action="#">
         <input type="text" name="query" placeholder="Search" title="Enter search keyword">
         <button type="submit" title="Search"><i class="bi bi-search"></i></button>
       </form>
@@ -274,33 +274,33 @@
   </li><!-- End Dashboard Nav -->
 
   <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-      <i class="bi bi-people"></i><span>User-management</span><i class="bi bi-chevron-down ms-auto"></i>
-    </a>
-    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-      <li>
-        <a href="components-alerts.html">
-          <i class="bi bi-circle"></i><span>Clients</span>
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-people"></i><span>User-management</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-       </li>
-      <li>
-        <a href="components-badges.html">
-          <i class="bi bi-circle"></i><span>Managers</span>
-        </a>
-      </li>
-      <li>
-        <a href="components-breadcrumbs.html">
-          <i class="bi bi-circle"></i><span>Admins</span>
-        </a>
-      </li>
-      <li>
-        <a href="components-buttons.html">
-          <i class="bi bi-circle"></i><span>All users</span>
-        </a>
-      </li>
-     
-    </ul>
-  </li><!-- End Components Nav -->
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/usertable">
+              <i class="bi bi-circle"></i><span>Clients</span>
+            </a>
+           </li>
+          <li>
+            <a href="/usertable">
+              <i class="bi bi-circle"></i><span>Managers</span>
+            </a>
+          </li>
+          <li>
+            <a href="/usertable">
+              <i class="bi bi-circle"></i><span>Admins</span>
+            </a>
+          </li>
+          <li>
+            <a href="/usertable">
+              <i class="bi bi-circle"></i><span>All users</span>
+            </a>
+          </li>
+         
+        </ul>
+      </li><!-- End Components Nav -->
 
   <li class="nav-item">
     <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
@@ -416,7 +416,7 @@
       <div class="row">
         <div class="col-lg-6">
 
-          <div class="card">
+          <div class="card" style=" width: max-content;">
             <div class="card-body">
               <h5 class="card-title">User_Table</h5>
               <table class="table">
@@ -441,7 +441,11 @@
                     <td>28</td>
                     <td>2016-05-25</td>
                     <td>client</td>
-                    <td><button style="color:green;">view</button></td>
+                    <td><select name="" >
+                      <option value="View">View</option>
+                      <option value="Delete">Delete</option>
+                       <option value="Update">Update</option>
+                                  </select></td>
 
                   </tr>
                   <tr>
@@ -451,7 +455,11 @@
                     <td>35</td>
                     <td>2014-12-05</td>
                     <td>Manager</td>
-                    <td><button style="color:green;">view</button ></td>
+                    <td><select name="" >
+                      <option value="View">View</option>
+                      <option value="Delete">Delete</option>
+                       <option value="Update">Update</option>
+                                  </select></td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
@@ -460,7 +468,11 @@
                     <td>45</td>
                     <td>2011-08-12</td>
                     <td>client</td>
-                    <td><button style="color:green;">view</button style="color:green;"></td>
+                    <td><select name="" >
+                      <option value="View">View</option>
+                      <option value="Delete">Delete</option>
+                       <option value="Update">Update</option>
+                                  </select></td>
                   </tr>
                   <tr>
                     <th scope="row">4</th>
@@ -469,7 +481,11 @@
                     <td>34</td>
                     <td>2012-06-11</td>
                     <td>Admin</td>
-                    <td><button style="color:green;">view</button ></td>
+                    <td><select name="" >
+                      <option value="View">View</option>
+                      <option value="Delete">Delete</option>
+                       <option value="Update">Update</option>
+                                  </select></td>
                   </tr>
                   <tr>
                     <th scope="row">5</th>
@@ -478,7 +494,11 @@
                     <td>47</td>
                     <td>2011-04-19</td>
                     <td>Manager</td>
-                    <td><button style="color:green;">view</button></td>
+                    <td><select name="" >
+                      <option value="View">View</option>
+                      <option value="Delete">Delete</option>
+                       <option value="Update">Update</option>
+                                  </select></td>
                   </tr>
                 </tbody>
               </table>

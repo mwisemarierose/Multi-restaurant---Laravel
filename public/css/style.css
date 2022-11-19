@@ -238,7 +238,7 @@ h6 {
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
-  width: max-content;
+ 
 }
 
 .card-header,
@@ -1433,7 +1433,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-  top: 40px;
+  
 }
 
 #header.header-scrolled {

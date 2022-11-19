@@ -70,4 +70,14 @@ class Usercontroller extends Controller
         $user-> update($input);
         return $user;
     }
+    public function manager(){
+        $manager= User::where('role','Manager')->get();
+        return $manager;
+        
+    }
+    public function client(){
+        $client = User::where('role','client')->get();
+        return $client;
+        
+    }
 }
