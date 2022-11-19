@@ -37,7 +37,9 @@ Route::get('/restaurants', function () {
 Route::get('/Restaurant_menu', function () {
     return view('frontend.Restaurant_menu');
 });
-
+Route::get('/Admin', function () {
+    return view('dashboard.admindash');
+});
 
 
 

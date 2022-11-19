@@ -108,6 +108,7 @@
                     </div>
 
                     <div class="col-12">
+                      <a href="#" style="color:blue">forget password? </a>
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
                         <label class="form-check-label" for="rememberMe">Remember me</label>
