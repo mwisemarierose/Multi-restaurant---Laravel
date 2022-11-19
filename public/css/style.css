@@ -1861,3 +1861,11 @@ h6 {
   font-size: 13px;
   color: #fff;
 }
+
+
+
+/*my css */
+.card-container{
+  display: flex;
+  flex-direction: row;
+}

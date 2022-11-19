@@ -285,50 +285,22 @@
               <i class="bi bi-circle"></i><span>Clients</span>
             </a>
            </li>
-          <li>
-            <a href="/usertable">
-              <i class="bi bi-circle"></i><span>Managers</span>
-            </a>
-          </li>
-          <li>
-            <a href="/usertable">
-              <i class="bi bi-circle"></i><span>Admins</span>
-            </a>
-          </li>
-          <li>
-            <a href="/usertable">
-              <i class="bi bi-circle"></i><span>All users</span>
-            </a>
-          </li>
+          
          
         </ul>
       </li><!-- End Components Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-house"></i><span>Restaurants</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-house"></i><span>Products</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>All Restaurants</span>
+            <a href="/Product">
+              <i class="bi bi-circle"></i><span>View Product</span>
             </a>
           </li>
-          <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Pending</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Approved</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Rejected</span>
-            </a>
-          </li>
+          
         </ul>
       </li><!-- End Forms Nav -->
 
@@ -407,7 +379,7 @@
       <h1>Dashboard</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
           <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>

@@ -39,7 +39,9 @@ Route::get('/profile', function () {
 Route::get('/Manager', function () {
     return view('frontend.dashboard.manager');
 });
-
+Route::get('/Product', function () {
+    return view('frontend.dashboard.tables.product');
+});
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 
