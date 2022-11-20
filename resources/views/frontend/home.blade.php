@@ -43,7 +43,7 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">FineFood</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="/">FineFood</a></h1>
    
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -216,7 +216,7 @@
               <h3>FineFood</h3>
               <p>
                 Kigali-Rwanda<br>
-                kST 202 Kiyovu<br><br>
+                KST 202 Kiyovu<br><br>
                 <strong>Phone:</strong> +250 788 888 888<br>
                 <strong>Email:</strong> info@finefood.com<br>
               </p>
@@ -242,13 +242,13 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>UpComing Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Food Delivering</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Hosting some Events</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Reservation</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">cooperate with many Restaurants</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Cooking Lessons</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Food Delivering</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Hosting some Events</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Reservation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">cooperate with many Restaurants</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Cooking Lessons</a></li>
             </ul>
         </div>
 

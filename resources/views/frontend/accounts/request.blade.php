@@ -44,7 +44,7 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">FineFood</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="/">FineFood</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -96,31 +96,41 @@
                       <label for="yourUsername" class="form-label">Restaurant Name</label>
                       <div class="input-group has-validation">
                         <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
-                        <input type="text" name="Name" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please choose a Restaurant Name.</div>
+                        <input type="text" name="Name" class="form-control" id="yourUsername" >
+                        @error('Name')
+                        <div class="text-danger" style="position:absolute;top:40px;margin-bottom:10px">{{ $message }}</div>
+                        @enderror
                       </div>
                       <div class="col-12">
                       <label for="yourUsername" class="form-label">Restaurant Email</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="email" name="Email" class="form-control" id="yourEmail" required>
-                        <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                        <input type="email" name="Email" class="form-control" id="yourEmail" >
+                        @error('email')
+                        <div class="text-danger" style="position:absolute;top:40px;margin-bottom:10px">{{ $message }}</div>
+                        @enderror
                       </div>
                       
                     <div class="col-12">
                       <label for="Address" class="form-label">Address</label>
-                      <input type="test" name="Address" class="form-control" id="yourEmail" required>
-                      <div class="invalid-feedback">Please enter your location adddress!</div>
+                      <input type="test" name="Address" class="form-control" id="yourEmail" >
+                      @error('Address')
+                        <div class="text-danger" style="position:absolute;top:40px;margin-bottom:10px">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-12">
                       <label for="Description" class="form-label">Description</label>
-                      <textarea name="Description" class="form-control" id="yourEmail" required></textarea>
-                      <div class="invalid-feedback">Please tell us who you are</div>
+                      <textarea name="Description" class="form-control" id="yourEmail" ></textarea>
+                      @error('Description')
+                        <div class="text-danger" style="position:absolute;top:40px;margin-bottom:10px">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-12">
-                      <label for="Image" class="form-label">Description</label>
-                      <input type="file" name="Image" class="form-control" id="yourEmail" required>
-                      <div class="invalid-feedback">Please tell us who you are</div>
+                      <label for="Image" class="form-label">Image</label>
+                      <input type="file" name="Image" class="form-control" id="yourEmail" >
+                      @error('Image')
+                        <div class="text-danger" style="position:absolute;top:40px;margin-bottom:10px">{{ $message }}</div>
+                        @enderror
                     </div>
                     </div>
 
@@ -128,7 +138,7 @@
 
                     <div class="col-12">
                       <div class="form-check">
-                        <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
+                        <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" >
                         <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
                         <div class="invalid-feedback">You must agree before submitting.</div>
                       </div>
