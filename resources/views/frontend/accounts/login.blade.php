@@ -88,15 +88,20 @@
                       <label for="yourUsername" class="form-label">Email</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="email" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please enter your username.</div>
+                        <input type="email" name="email" class="form-control" id="yourUsername"  ><br>
+                        @error('email')
+                        <div class="text-danger" style="position:absolute;top:40px;margin-bottom:10px">{{ $message }}</div>
+                        @enderror
+
                       </div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Please enter your password!</div>
+                      <label for="yourPassword" class="form-label" style="margin-top:10px;">Password</label>
+                      <input type="password" name="password" class="form-control" id="yourPassword" >
+                      @error('password')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="col-12">
