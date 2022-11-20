@@ -30,15 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link rel="stylesheet" href="{{URL::asset('/css/style.css');}}">
-  <!-- <link href="{{URL::asset('assets/css/style.css');}}" rel="stylesheet"> -->
 
-
-  <!-- =======================================================
-  * Template Name: NiceAdmin - v2.4.1
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -55,7 +47,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
         <li><a class="nav-link scrollto " href="/">Home</a></li>
-          <li><a class="nav-link scrollto" href="/restaurants">Restaurants</a></li>
+        <li><a class="nav-link scrollto" href="/requests/approved">Restaurants</a></li>
           <li><a class="nav-link scrollto" href="/request">Request</a></li>
          
            

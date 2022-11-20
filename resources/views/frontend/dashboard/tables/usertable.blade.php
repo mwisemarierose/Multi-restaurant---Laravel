@@ -28,13 +28,6 @@
 
   <!-- Template Main CSS File -->
   <link href="{{URL::asset('css/style.css');}}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: FineFood - v2.4.1
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -279,22 +272,22 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/usertable">
+            <a href="/users/clients">
               <i class="bi bi-circle"></i><span>Clients</span>
             </a>
            </li>
           <li>
-            <a href="/usertable">
+            <a href="#">
               <i class="bi bi-circle"></i><span>Managers</span>
             </a>
           </li>
           <li>
-            <a href="/usertable">
+            <a href="#">
               <i class="bi bi-circle"></i><span>Admins</span>
             </a>
           </li>
           <li>
-            <a href="/usertable">
+            <a href="#">
               <i class="bi bi-circle"></i><span>All users</span>
             </a>
           </li>
@@ -425,7 +418,6 @@
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">phone_number</th>
                     <th scope="col">Start Date</th>
                     <th scope="col">status</th>
                     <th scope="col">action</th>
@@ -461,45 +453,7 @@
                        <option value="Update">Update</option>
                                   </select></td>
                   </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Ashleigh Langosh</td>
-                    <td>Finance</td>
-                    <td>45</td>
-                    <td>2011-08-12</td>
-                    <td>client</td>
-                    <td><select name="" >
-                      <option value="View">View</option>
-                      <option value="Delete">Delete</option>
-                       <option value="Update">Update</option>
-                                  </select></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Angus Grady</td>
-                    <td>HR</td>
-                    <td>34</td>
-                    <td>2012-06-11</td>
-                    <td>Admin</td>
-                    <td><select name="" >
-                      <option value="View">View</option>
-                      <option value="Delete">Delete</option>
-                       <option value="Update">Update</option>
-                                  </select></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Raheem Lehner</td>
-                    <td>Dynamic Division Officer</td>
-                    <td>47</td>
-                    <td>2011-04-19</td>
-                    <td>Manager</td>
-                    <td><select name="" >
-                      <option value="View">View</option>
-                      <option value="Delete">Delete</option>
-                       <option value="Update">Update</option>
-                                  </select></td>
-                  </tr>
+    
                 </tbody>
               </table>
               <!-- End Default Table Example -->

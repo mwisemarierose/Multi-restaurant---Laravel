@@ -57,7 +57,7 @@
          
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="/login" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
+      <a href="/login" class="nav-link scrollto active">LogIn</a>
 
     </div>
   </header><!-- End Header -->
@@ -93,15 +93,18 @@
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Restaurant Name</label>
                       <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
                         <input type="text" name="Name" class="form-control" id="yourUsername" required>
                         <div class="invalid-feedback">Please choose a Restaurant Name.</div>
                       </div>
                       <div class="col-12">
-                      <label for="yourEmail" class="form-label">Restaurant Email</label>
-                      <input type="email" name="Email" class="form-control" id="yourEmail" required>
-                      <div class="invalid-feedback">Please enter a valid Email adddress!</div>
-                    </div>
+                      <label for="yourUsername" class="form-label">Restaurant Email</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="email" name="Email" class="form-control" id="yourEmail" required>
+                        <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                      </div>
+                      
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">Address</label>
                       <input type="test" name="Address" class="form-control" id="yourEmail" required>

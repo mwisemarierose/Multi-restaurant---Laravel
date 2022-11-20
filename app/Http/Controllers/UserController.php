@@ -77,7 +77,9 @@ class Usercontroller extends Controller
     }
     public function client(){
         $client = User::where('role','client')->get();
-        return $client;
+        return view('frontend.tables.usertable')->with('client',$client);
+
+        // return $client;
         
     }
 }

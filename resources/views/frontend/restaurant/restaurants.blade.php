@@ -87,13 +87,17 @@
               <h4>{{$restaurant->Name}}</h4>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
                <a href="/menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
+               
             </div>
-         
+            
           </div>
-          @endforeach 
+          
         </div>
+        @endforeach
       </div>
+       
     </section>
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
