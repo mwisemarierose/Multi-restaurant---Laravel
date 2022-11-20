@@ -57,7 +57,9 @@
          
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="/login" class="nav-link scrollto active">LogIn</a>
+      
+      <a href="/login" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
+
 
     </div>
   </header><!-- End Header -->

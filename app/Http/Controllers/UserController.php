@@ -37,7 +37,7 @@ class Usercontroller extends Controller
         ]);
         $user = User :: where('email', $loginUser['email'])-> first();
         if(!$user || !Hash:: check($loginUser['password'], $user -> password)){
-            return response(["message"=>"wrong credentials"],401);
+            return response(["message"=>"Email or password incorrect"],401);
         };
         $token = $user -> createToken('fine')->plainTextToken;
         $response=[
