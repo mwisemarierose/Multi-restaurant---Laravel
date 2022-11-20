@@ -86,7 +86,7 @@
                     <p class="text-center small">FineFood</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" action="requests/store" method="POST">
+                  <form class="row g-3 needs-validation" action="/requests/store" method="POST">
                   {{csrf_field()}}
                     
 
@@ -106,13 +106,18 @@
                       </div>
                       
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">Address</label>
+                      <label for="Address" class="form-label">Address</label>
                       <input type="test" name="Address" class="form-control" id="yourEmail" required>
                       <div class="invalid-feedback">Please enter your location adddress!</div>
                     </div>
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">Description</label>
+                      <label for="Description" class="form-label">Description</label>
                       <textarea name="Description" class="form-control" id="yourEmail" required></textarea>
+                      <div class="invalid-feedback">Please tell us who you are</div>
+                    </div>
+                    <div class="col-12">
+                      <label for="Image" class="form-label">Description</label>
+                      <input type="file" name="Image" class="form-control" id="yourEmail" required>
                       <div class="invalid-feedback">Please tell us who you are</div>
                     </div>
                     </div>

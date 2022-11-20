@@ -71,22 +71,26 @@
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
+    <div class="section-title">
           <p>Our Restaurants</p>
         </div>
+
+      <div class="container restaurants" data-aos="fade-up">
+        
         @foreach($restaurants as $restaurant)
         <div class="row">
         
-          <div class="col-lg-4">
+          <div class="col-lg-4 restaurant-card">
+          
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
+           
               <span>{{$restaurant->id}}</span>
               <div class="resto-photo"> 
               <img src="{{$restaurant->Image}}" class="menu-img" alt="">
               </div>
               <h4>{{$restaurant->Name}}</h4>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-               <a href="/menu" class="book-a-table-btn scrollto d-none d-lg-flex">Menu</a>
+               <a href="/menu" class="book-a-table-btn scrollto d-none d-lg-flex" style="width:fit-content;">Menu</a>
                
             </div>
             

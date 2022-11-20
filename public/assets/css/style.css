@@ -1776,5 +1776,15 @@ body {
     width: 250px;
     border-radius: 50%;
     border: 10px solid white;
-    margin-left: 25px;
+    margin-left: 20px;
+  }
+  .restaurants{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+  }
+  .restaurant-card{
+    margin: 20px;
+    width:min-content
   }
