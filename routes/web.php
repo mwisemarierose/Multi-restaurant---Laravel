@@ -54,6 +54,15 @@ Route::get('/Forget', function () {
 Route::get('/Reset', function () {
     return view('frontend.accounts.reset');
 });
+Route::get('/Userform', function () {
+    return view('frontend.dashboard.forms.userform');
+});
+Route::get('/Restaurantform', function () {
+    return view('frontend.dashboard.forms.restaurantform');
+});
+Route::get('/orderform', function () {
+    return view('frontend.dashboard.forms.orderform');
+});
 
 
 
