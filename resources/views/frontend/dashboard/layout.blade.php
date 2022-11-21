@@ -287,7 +287,7 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/usertable">
+            <a href="/users/clients">
               <i class="bi bi-circle"></i><span>Users</span>
             </a>
            </li>
@@ -302,7 +302,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/Product">
+            <a href="/menu/getAll">
               <i class="bi bi-circle"></i><span>View Product</span>
             </a>
           </li>
@@ -318,7 +318,7 @@
         </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/Order">
+            <a href="/order">
               <i class="bi bi-circle"></i><span>View Orders</span>
             </a>
           </li>

@@ -33,20 +33,28 @@
 
                   </tr>
                 </thead>
+                @foreach($orders as $order)
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Brandon Jacob</td>
-                    <td>Designer</td>
-                    <td>Designer</td>
-                    <td>Designer</td>
+                    <td>{{$order->user_id}}</td>
+                    <td>{{$order->menu_id}}</td>
+                    <td>{{$order->quantity}}</td>
+                    <td>{{$order->quantity}}</td>
+                    <td>{{$order->amount}}</td>
+                    <td>{{$order->status}}</td>
+                    <td>{{$order->status}}</td>
+
+
+
+
 
                     <td>28</td>
                     <td>2016-05-25</td>
                     <td>Order_status</td>
 
                   </tr>
-                 
+                  @endforeach
                 </tbody>
                 
               </table>

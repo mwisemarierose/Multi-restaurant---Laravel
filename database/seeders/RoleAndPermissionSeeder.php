@@ -53,10 +53,7 @@ class RoleAndPermissionSeeder extends Seeder
             $updateProduct
         ]);
         // Role::create(['name'=>$client])->givePermissionTo([
-        //     $createProduct,
-        //     $editProduct,
-        //     $deleteProduct,
-        //     $updateProduct
+        //    
         // ]);
         
     }

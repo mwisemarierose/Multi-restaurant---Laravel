@@ -3,7 +3,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>All user</h1>
+      <h1>All clients</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -20,6 +20,7 @@
             <div class="card-body">
               <h5 class="card-title">User_Table</h5>
               <table class="table table-bordered yajra-datatable">
+              
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -28,17 +29,16 @@
                     <th scope="col">Role</th>
                     <th scope="col">Join at</th>
                     <th scope="col">action</th>
-
-
                   </tr>
                 </thead>
                 <tbody>
+                @foreach($clients as $client)
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Brandon Jacob</td>
-                    <td>Designer</td>
-                    <td>28</td>
-                    <td>2016-05-25</td>
+                    <th scope="row">{{$client->id}}</th>
+                    <td>{{$client->username}}</td>
+                    <td>{{$client->email}}</td>
+                    <td>{{$client->role}}</td>
+                    <td>{{$client->created_at}}</td>
                     <td><select class="form-control" name="" >
                       <option value="View">View</button></option>
                       <option value="Delete">Delete</option>
@@ -46,13 +46,10 @@
                                   </select></td>
 
                   </tr>
-                 
+                  @endforeach
                 </tbody>
                 
               </table>
-
-             
-              <!-- End Default Table Example -->
             </div>
           </div>
           
@@ -75,5 +72,4 @@
     </section>
 
   </main><!-- End #main -->
-
-  @endsection
+  

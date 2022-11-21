@@ -20,7 +20,7 @@ class Usercontroller extends Controller
             'role' => 'client ',
             'password'=>Hash::make($request->password)
         ]);
-        $createUser->assignRole('client');
+        // $createUser->assignRole('client');
         // $data = [
         //     'subject'=>'Electronics shop mail',
         //     'body'=>'this is the email test'
@@ -83,7 +83,8 @@ class Usercontroller extends Controller
     }
     public function client(){
         $client = User::where('role','client')->get();
-        return view('frontend.tables.usertable')->with('client',$client);
+        // return $client; 
+        return view('frontend.dashboard.tables.usertable')->with('clients',$client);
 
         // return $client;
         
