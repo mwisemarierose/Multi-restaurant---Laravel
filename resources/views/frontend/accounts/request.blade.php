@@ -139,7 +139,7 @@
                     <div class="col-12">
                       <div class="form-check">
                         <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" >
-                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
+                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#" style="color:blue;">terms and conditions</a></label>
                         <div class="invalid-feedback">You must agree before submitting.</div>
                       </div>
                     </div>
@@ -147,7 +147,7 @@
                       <button class="btn btn-primary w-100" type="submit">Send Request</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Already have an account? <a href="/login">Log in</a></p>
+                      <p class="small mb-0">Already have an account? <a href="/login" style="color:blue;">Log in</a></p>
                     </div>
                   </form>
 

@@ -99,13 +99,13 @@
                     <div class="col-12">
                       <label for="yourPassword" class="form-label" style="margin-top:10px;">Password</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" >
-                      @error('password')
-                        <div class="text-danger">{{ $message }}</div>
-                        @enderror
+                        @error('password')
+                          <div class="text-danger">{{ $message }}</div>
+                          @enderror
                     </div>
 
                     <div class="col-12">
-                      <a href="#" style="color:blue">forget password? </a>
+                      <a href="/Forget" style="color:blue">forget password? </a>
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
                         <label class="form-check-label" for="rememberMe">Remember me</label>
@@ -115,7 +115,7 @@
                       <button class="btn btn-primary w-100" type="submit">Login</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Don't have account? <a href="/register">Create an account</a></p>
+                      <p class="small mb-0">Don't have account? <a href="/register" style="color:blue;">Create an account</a></p>
                     </div>
                   </form>
 

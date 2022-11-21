@@ -275,7 +275,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="/Admin">
+        <a class="nav-link " href="#">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -288,7 +288,7 @@
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="/usertable">
-              <i class="bi bi-circle"></i><span>Clients</span>
+              <i class="bi bi-circle"></i><span>Users</span>
             </a>
            </li>
           
@@ -318,20 +318,11 @@
         </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="charts-chartjs.html">
-              <i class="bi bi-circle"></i><span>Pending</span>
+            <a href="/Order">
+              <i class="bi bi-circle"></i><span>View Orders</span>
             </a>
           </li>
-          <li>
-            <a href="charts-apexcharts.html">
-              <i class="bi bi-circle"></i><span>Approved</span>
-            </a>
-          </li>
-          <li>
-            <a href="charts-echarts.html">
-              <i class="bi bi-circle"></i><span>Rejected</span>
-            </a>
-          </li>
+          
         </ul>
       </li><!-- End Charts Nav -->
 
@@ -381,19 +372,7 @@
 
 @yield('content')
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>FineFood</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-  
-    </div>
-  </footer><!-- End Footer -->
+ 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
