@@ -42,10 +42,27 @@ Route::get('/Manager', function () {
 Route::get('/Product', function () {
     return view('frontend.dashboard.tables.product');
 });
+Route::get('/restaurant_table', function () {
+    return view('frontend.dashboard.tables.restaurants');
+});
+Route::get('/Order', function () {
+    return view('frontend.dashboard.tables.ordertable');
+});
+Route::get('/Forget', function () {
+    return view('frontend.accounts.forget');
+});
+Route::get('/Reset', function () {
+    return view('frontend.accounts.reset');
+});
+
+
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 
 });
+
 
 Route::resource('/users',UserController::class);
 Route::post("/users/login",[UserController::class, 'login']);

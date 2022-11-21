@@ -88,9 +88,10 @@
               <div class="resto-photo"> 
               <img src="{{$restaurant->Image}}" class="menu-img" alt="">
               </div>
-              <h4>{{$restaurant->Name}}</h4>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-               <a href="/menu" class="book-a-table-btn scrollto d-none d-lg-flex" style="width:fit-content;">Menu</a>
+              <h3>{{$restaurant->Name}}</h3>
+              <h4>{{$restaurant->Address}}</h4>
+              <p>{{$restaurant->Description}}</p>
+               <a href="/menu" class="book-a-table-btn scrollto d-none d-lg-flex" style="width:fit-content; margin-top:30px;">Menu</a>
                
             </div>
             
