@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use App\mail\MailNotify;
+use Illuminate\Support\Facades\Auth ;
 
 class Usercontroller extends Controller
 {
@@ -19,6 +20,7 @@ class Usercontroller extends Controller
             'role' => 'client ',
             'password'=>Hash::make($request->password)
         ]);
+        $createUser->assignRole('client');
         // $data = [
         //     'subject'=>'Electronics shop mail',
         //     'body'=>'this is the email test'
@@ -28,24 +30,28 @@ class Usercontroller extends Controller
 
     }
 
-    public function login(Request $request){
-
-        $loginUser = $request-> validate([
-            'email' => 'required|string',
-            'password' => 'required|string',
-            
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
         ]);
-        $user = User :: where('email', $loginUser['email'])-> first();
-        if(!$user || !Hash:: check($loginUser['password'], $user -> password)){
-            return response(["message"=>"Email or password incorrect"],401);
-        };
-        $token = $user -> createToken('fine')->plainTextToken;
-        $response=[
-            "user"=>$user,
-            "token"=>$token
-        ];
-        return response($response ,200);
+ 
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return "you are logged in";
+        }
+        // else if(Auth::attempt($credentials))
+        //   {
+        //     return redirect()->intended('management/dashboard');
+        //     }
+      else{
+        return back()->withErrors([
+            'email' => 'incorrect username or password!',
+        ])->onlyInput('email');
+    
     }
+}
 
     public function index(){
 

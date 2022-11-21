@@ -14,6 +14,8 @@ class order extends Model
     'quantity',
     'amount',
     'status',
+    'address',
+    "phoneNumber"
     ];
     public function user(){
         return $this-> belongsTo(User::class);

@@ -105,6 +105,12 @@ class requestsController extends Controller
             'role' => 'Manager ',
             'password'=>Hash::make($password)
         ]);
+        $createUser->assignRole('Manager');
+        $data = [
+            'subject'=>'Electronics shop mail',
+            'body'=> $password
+        ];
+        Mail::to($requests['Email'])->send(new MailNotify($data));
         $res = [
             'message' => 'Request Approved successfully',
             'data' => $requests
