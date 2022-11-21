@@ -26,6 +26,11 @@ class menuController extends Controller
         $items = menu::all();
         return view('frontend.restaurant.restaurant_menu')->with('items',$items);
     }
+    public function FindAll(){
+        $item = menu::all();
+        
+        return view('frontend.dashboard.tables.product')->with('items',$item);
+    }
     
     public function show($id){
         $item = menu::find($id);

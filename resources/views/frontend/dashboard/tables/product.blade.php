@@ -32,12 +32,13 @@
                   </tr>
                 </thead>
                 <tbody>
+                @foreach($items as $item)
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Brandon Jacob</td>
-                    <td>Designer</td>
-                    <td>28</td>
-                    <td>2016-05-25</td>
+                    <th scope="row">{{$item->id}}</th>
+                    <td>{{$item->Title}}</td>
+                    <td>{{$item->Description}}</td>
+                    <td>{{$item->Price}}</td>
+                    <td>{{$item->quantity}}</td>
                     <td><select class="form-control" name="" >
                       <option class="form-control" value="View">View</option>
                       <option class="form-control" value="Delete">Delete</option>
@@ -45,7 +46,7 @@
                                   </select></td>
 
                   </tr>
-                 
+                  @endforeach
                 </tbody>
                 
               </table>

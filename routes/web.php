@@ -29,9 +29,9 @@ Route::get('/Restaurant_menu', function () {
 Route::get('/Admin', function () {
     return view('frontend.dashboard.admindash');
 });
-Route::get('/usertable', function () {
-    return view('frontend.dashboard.tables.usertable');
-});
+// Route::get('/usertable', function () {
+//     return view('frontend.dashboard.tables.usertable');
+// });
 Route::get('/profile', function () {
     return view('frontend.dashboard.userProfile.Userprofile');
 });
@@ -39,9 +39,9 @@ Route::get('/profile', function () {
 Route::get('/Manager', function () {
     return view('frontend.dashboard.manager');
 });
-Route::get('/Product', function () {
-    return view('frontend.dashboard.tables.product');
-});
+// Route::get('/Product', function () {
+//     return view('frontend.dashboard.tables.product');
+// });
 Route::get('/restaurant_table', function () {
     return view('frontend.dashboard.tables.restaurants');
 });
@@ -72,7 +72,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 });
 
-
+Route::get("/users/clients",[UserController::class, 'client']);
 Route::resource('/users',UserController::class);
 Route::post("/users/login",[UserController::class, 'login']);
 Route::post("/users/store",[UserController::class, 'store']);
@@ -85,6 +85,7 @@ Route::patch('/requests/reject/{id}', [requestsController::class,'rejectRequest'
 Route::get('/requests/approved',    [requestsController::class,'approvedRequest']);
 Route::resource('/requests',requestsController::class);
 
+Route::get('/menu/getAll',[menuController::class,'findAll']);
 Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
 Route::resource('/menu',menuController::class);
 

@@ -21,6 +21,8 @@ return new class extends Migration
             $table->integer('quantity');
             $table->integer('amount');
             $table->string('status');
+            $table->string('address');
+            $table->integer('phoneNumber');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('menu_id')->references('id')->on('menus')->onDelete('cascade');
 

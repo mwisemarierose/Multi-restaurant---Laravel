@@ -14,11 +14,9 @@ class OrderController extends Controller
     public function index()
     {
         $order = Order::all();
-        $res = [
-            'message' => 'Retrieved',
-            'data' => $order
-        ];
-        return Response()->json($res, 200);
+        
+        return view('frontend.dashboard.tables.ordertable')->with('orders',$order);
+
     }
 
     
@@ -30,6 +28,8 @@ class OrderController extends Controller
             'user_id'=>$request->user_id,
             'menu_id'=> $request-> menu_id,
             'quantity'=>$request->quantity,
+            'address' =>$request->address,
+            'phoneNumber' =>$request->phoneNumber,
             'amount'=>$amount,
             'status' => 'pending'
         ]);
