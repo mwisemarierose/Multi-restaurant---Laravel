@@ -20,7 +20,7 @@ class MailNotify extends Mailable
 
     public function build()
     {
-        return $this->from('electronicsshop@gmail.com','Electronics Shop')
+        return $this->from('finefood@gmail.com','Fine Food Restaurant')
         ->subject($this->data['subject'])
         ->view('emails.index')->with('data',$this->data)
 ;
