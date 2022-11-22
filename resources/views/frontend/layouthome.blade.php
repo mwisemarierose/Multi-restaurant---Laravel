@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Restaurants</title>
+  <title>Fine Food Restaurant</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,13 +27,6 @@
 
   <!-- Template Main CSS File -->
   <link href="{{URL::asset('assets/css/style.css');}}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Restaurantly - v3.9.1
-  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -42,6 +35,7 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-center justify-content-md-between">
 
+     
     </div>
   </div>
 
@@ -49,14 +43,13 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">FineFood</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="logo me-auto me-lg-0"><a href="/">FineFood</a></h1>
+   
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="/">Home</a></li>
-          <li><a class="nav-link scrollto active" href="/requests/approved">Restaurants</a></li>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/requests/approved">Restaurants</a></li>
           <li><a class="nav-link scrollto" href="/request">Request</a></li>
          
            
@@ -67,45 +60,28 @@
     </div>
   </header><!-- End Header -->
 
-  
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Welcome to <span>FineFood</span></h1>
+          <h2>We cooperate with many Restaurants to serve you delicious foods!</h2>
 
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
-    <div class="section-title">
-          <p>Our Restaurants</p>
-        </div>
-
-      <div class="container restaurants" data-aos="fade-up">
-        
-        @foreach($restaurants as $restaurant)
-        <div class="row">
-        
-          <div class="col-lg-4 restaurant-card">
-          
-            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-           
-              <span>{{$restaurant->id}}</span>
-              <div class="resto-photo"> 
-              <img src="{{$restaurant->Image}}" class="menu-img" alt="">
-              </div>
-              <h3>{{$restaurant->Name}}</h3>
-              <h4>{{$restaurant->Address}}</h4>
-              <p>{{$restaurant->Description}}</p>
-               <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex" style="width:fit-content; margin-top:30px;">Menu</a>
-               
-            </div>
-            
+          <div class="btns">
+            <a href="/requests/approved" class="btn-menu animated fadeInUp scrollto">Our Restaurants</a>
+            <a href="/login" class="btn-book animated fadeInUp scrollto">LogIn</a>
           </div>
-          
         </div>
-        @endforeach
-      </div>
        
-    </section>
 
+      </div>
+    </div>
+  </section><!-- End Hero -->
+  @yield('content')
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+   <!-- ======= Footer ======= -->
+   <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -115,7 +91,7 @@
               <h3>FineFood</h3>
               <p>
                 Kigali-Rwanda<br>
-                kST 202 Kiyovu<br><br>
+                KST 202 Kiyovu<br><br>
                 <strong>Phone:</strong> +250 788 888 888<br>
                 <strong>Email:</strong> info@finefood.com<br>
               </p>
@@ -141,13 +117,13 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>UpComing Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Food Delivering</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Hosting some Events</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Reservation</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">cooperate with many Restaurants</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Cooking Lessons</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Food Delivering</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Hosting some Events</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Reservation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">cooperate with many Restaurants</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Cooking Lessons</a></li>
             </ul>
         </div>
 
@@ -173,15 +149,15 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
-  <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{URL::asset('assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{URL::asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{URL::asset('assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{URL::asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{URL::asset('assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{URL::asset('assets/vendor/php-email-form/validate.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{asset('assets/js/main.js')}}"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 

@@ -39,11 +39,7 @@
                     <td>{{$client->email}}</td>
                     <td>{{$client->role}}</td>
                     <td>{{$client->created_at}}</td>
-                    <td><select class="form-control" name="" >
-                      <option value="View">View</button></option>
-                      <option value="Delete">Delete</option>
-                       <option value="Update">Update</option>
-                                  </select></td>
+                    <td><button class="btn btn-primary" onclick="location.href='/Userform'">View</button></td>
 
                   </tr>
                   @endforeach

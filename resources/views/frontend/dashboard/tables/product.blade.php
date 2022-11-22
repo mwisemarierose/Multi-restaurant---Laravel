@@ -39,11 +39,7 @@
                     <td>{{$item->Description}}</td>
                     <td>{{$item->Price}}</td>
                     <td>{{$item->quantity}}</td>
-                    <td><select class="form-control" name="" >
-                      <option class="form-control" value="View">View</option>
-                      <option class="form-control" value="Delete">Delete</option>
-                       <option class="form-control" value="Update">Update</option>
-                                  </select></td>
+                    <td><button class="btn btn-primary">View</button></td>
 
                   </tr>
                   @endforeach
