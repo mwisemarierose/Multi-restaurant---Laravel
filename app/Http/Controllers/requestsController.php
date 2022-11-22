@@ -23,11 +23,6 @@ class requestsController extends Controller
             'Status' => 'Pending'
         ]);
 
-        // $data = [
-        //     'subject'=>'Electronics shop mail',
-        //     'body'=>'this is the email test'
-        // ];
-        // Mail::to($request['Email'])->send(new MailNotify($data));
         $res = [
             'message' => 'request Created Successfully',
             'data' => $createRequests
@@ -107,7 +102,7 @@ class requestsController extends Controller
         ]);
         $createUser->assignRole('Manager');
         $data = [
-            'subject'=>'Electronics shop mail',
+            'subject'=>'Fine Food Restaurant',
             'body'=> $password
         ];
         Mail::to($requests['Email'])->send(new MailNotify($data));

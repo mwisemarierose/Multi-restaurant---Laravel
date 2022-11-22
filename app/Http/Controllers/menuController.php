@@ -19,7 +19,9 @@ class menuController extends Controller
             'user_id'=>$request -> user_id,
             'quantity' =>$request ->quantity
         ]);
-        return $item;
+        // return $item;
+        return redirect('/menu/getAll');
+
     }
 
     public function index(){

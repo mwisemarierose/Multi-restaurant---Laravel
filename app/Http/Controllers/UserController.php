@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use App\mail\MailNotify;
 use Illuminate\Support\Facades\Auth ;
+use Spatie\Permission\Models\permission;
+use Spatie\Permission\Models\Roles;
+
+
 
 class Usercontroller extends Controller
 {
@@ -37,14 +41,14 @@ class Usercontroller extends Controller
             'password' => ['required'],
         ]);
  
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials) && Auth()->user()->role=='client') {
             $request->session()->regenerate();
-            return "you are logged in";
+            return redirect()->intended('/');
         }
-        // else if(Auth::attempt($credentials))
-        //   {
-        //     return redirect()->intended('management/dashboard');
-        //     }
+        else if(Auth::attempt($credentials))
+          {
+            return redirect()->intended('/Manager');
+            }
       else{
         return back()->withErrors([
             'email' => 'incorrect username or password!',

@@ -52,9 +52,9 @@ class RoleAndPermissionSeeder extends Seeder
             $deleteProduct,
             $updateProduct
         ]);
-        // Role::create(['name'=>$client])->givePermissionTo([
-        //    
-        // ]);
+        Role::create(['name'=>$client])->givePermissionTo([
+           
+        ]);
         
     }
 }

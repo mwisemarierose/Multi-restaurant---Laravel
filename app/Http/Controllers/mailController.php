@@ -10,12 +10,12 @@ class MailController extends Controller
 {
     public function index(){
         $data = [
-            'subject'=>'Electronics shop mail',
+            'subject'=>'Fine Food Restaurant',
             'body'=>'this is the email test'
         ];
         
         try {
-            Mail::to('ngarukiyimanasostene@gmail.com')->send(new MailNotify($data));
+            Mail::to('rosemwiseneza5@gmail.com')->send(new MailNotify($data));
             return response()->json(['Great,check your email.']);
         } catch (\Throwable $th) {
             return response()->json(['Sorry, something went wrong']);
