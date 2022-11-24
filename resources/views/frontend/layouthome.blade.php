@@ -55,8 +55,12 @@
            
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+      @if(!auth()->user())
       <a href="/login" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
-
+      @else
+      <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
+      @endif
+    </div>
     </div>
   </header><!-- End Header -->
 
