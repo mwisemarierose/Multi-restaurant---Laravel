@@ -55,8 +55,13 @@
            
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+      @if(!auth()->user())
       <a href="/login" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
-
+      @else
+     
+      <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
+      {{auth()->user()->username}}
+      @endif
     </div>
   </header><!-- End Header -->
 
@@ -70,7 +75,9 @@
 
           <div class="btns">
             <a href="/requests/approved" class="btn-menu animated fadeInUp scrollto">Our Restaurants</a>
+            @if(!auth()->user())
             <a href="/login" class="btn-book animated fadeInUp scrollto">LogIn</a>
+            @endif
           </div>
         </div>
        

@@ -30,7 +30,7 @@ class Usercontroller extends Controller
         //     'body'=>'this is the email test'
         // ];
         // Mail::to($request['email'])->send(new MailNotify($data));
-        return $createUser;
+        return redirect()->intended('/login');
 
     }
 
@@ -41,22 +41,29 @@ class Usercontroller extends Controller
             'password' => ['required'],
         ]);
  
-        if (Auth::attempt($credentials) && Auth()->user()->role=='client') {
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
-        else if(Auth::attempt($credentials))
-          {
-            return redirect()->intended('/Manager');
-            }
+        // else if(Auth::attempt($credentials))
+        //   {
+        //     return redirect()->intended('management/dashboard');
+        //     }
       else{
         return back()->withErrors([
-            'email' => 'incorrect username or password!',
+            'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     
     }
 }
 
+public function logout(Request $request)
+{
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
+}
     public function index(){
 
         $users = User::all();

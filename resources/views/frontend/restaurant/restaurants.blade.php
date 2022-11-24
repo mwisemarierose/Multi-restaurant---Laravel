@@ -91,7 +91,7 @@
               <h3>{{$restaurant->Name}}</h3>
               <h4>{{$restaurant->Address}}</h4>
               <p>{{$restaurant->Description}}</p>
-               <a href="/Restaurant_menu" class="book-a-table-btn scrollto d-none d-lg-flex" style="width:fit-content; margin-top:30px;">Menu</a>
+               <a href="/menu" class="book-a-table-btn scrollto d-none d-lg-flex" style="width:fit-content; margin-top:30px;">Menu</a>
                
             </div>
             
