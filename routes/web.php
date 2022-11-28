@@ -23,9 +23,9 @@ Route::get('/request', function () {
 // Route::get('/restaurants', function () {
 //     return view('frontend.restaurant.restaurants');
 // });
-Route::get('/Restaurant_menu', function () {
-    return view('frontend.restaurant.Restaurant_menu');
-});
+// Route::get('/Restaurant_menu', function () {
+//     return view('frontend.restaurant.Restaurant_menu');
+// });
 Route::get('/Admin', function () {
     return view('frontend.dashboard.admindash');
 });
@@ -71,7 +71,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 
 });
-
+Route::get("/users/logout",[UserController::class, 'logout']);
 Route::get("/users/clients",[UserController::class, 'client']);
 Route::resource('/users',UserController::class);
 Route::post("/users/login",[UserController::class, 'login']);

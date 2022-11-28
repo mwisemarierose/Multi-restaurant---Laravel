@@ -13,6 +13,9 @@ Route::middleware('auth:sanctum','can:delete')->get('/user', function (Request $
 
 });
 
+Route::get("/users/logout",[UserController::class, 'logout']);
+
+Route::post("/users/store",[UserController::class, 'store']);
 Route::post("/users/login",[UserController::class, 'login']);
 Route::get("/users/managers",[UserController::class, 'manager']);
 Route::get("/users/clients",[UserController::class, 'client']);

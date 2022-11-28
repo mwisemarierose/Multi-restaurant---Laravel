@@ -86,7 +86,7 @@
                     <p class="text-center small">FineFood</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" action="users/store" method="POST">
+                  <form class="row g-3 needs-validation" action="users/store" method="POST" enctype="multipart/form-data">
                   {{csrf_field()}}
                     
 

@@ -211,7 +211,7 @@
 
           </ul><!-- End Messages Dropdown Items -->
 
-        </li><!-- End Messages Nav -->
+        <!-- </li>End Messages Nav -->
 
         <li class="nav-item dropdown pe-3">
 
@@ -255,7 +255,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="/">
+              <a class="dropdown-item d-flex align-items-center" href="/users/logout">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>

@@ -97,7 +97,7 @@ class requestsController extends Controller
         $createUser = User::create([
             'username'=>$requests->Name,
             'email'=>$requests->Email,
-            'role' => 'Manager ',
+            'role' => 'Manager',
             'password'=>Hash::make($password)
         ]);
         $createUser->assignRole('Manager');

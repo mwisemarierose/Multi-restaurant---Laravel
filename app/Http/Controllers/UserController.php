@@ -21,7 +21,7 @@ class Usercontroller extends Controller
         $createUser = User::create([
             'username'=>$request->username,
             'email'=>$request->email,
-            'role' => 'client ',
+            'role' => 'client',
             'password'=>Hash::make($request->password)
         ]);
         // $createUser->assignRole('client');
@@ -30,7 +30,7 @@ class Usercontroller extends Controller
         //     'body'=>'this is the email test'
         // ];
         // Mail::to($request['email'])->send(new MailNotify($data));
-        return $createUser;
+        return redirect()->intended('/login');
 
     }
 
@@ -41,7 +41,7 @@ class Usercontroller extends Controller
             'password' => ['required'],
         ]);
  
-        if (Auth::attempt($credentials) && Auth()->user()->role=='client') {
+        if (Auth::attempt($credentials)  && auth()->user()->role=='client') {
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
@@ -51,12 +51,19 @@ class Usercontroller extends Controller
             }
       else{
         return back()->withErrors([
-            'email' => 'incorrect username or password!',
+            'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     
     }
 }
 
+public function logout(Request $request)
+{
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
+}
     public function index(){
 
         $users = User::all();
