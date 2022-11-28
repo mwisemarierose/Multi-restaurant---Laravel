@@ -359,7 +359,7 @@
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="/">
+        <a class="nav-link collapsed" href="/users/logout">
           <i class="bi bi-box-arrow-in-left"></i>
           <span>LogOut</span>
         </a>

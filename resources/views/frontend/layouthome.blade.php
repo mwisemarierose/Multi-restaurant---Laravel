@@ -61,6 +61,7 @@
       <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
       @endif
     </div>
+    </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
