@@ -27,7 +27,8 @@ class requestsController extends Controller
             'message' => 'request Created Successfully',
             'data' => $createRequests
         ];
-        return Response()->json($res, 200);
+        return redirect()->intended('/');
+
     }
     public function index(){
 

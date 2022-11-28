@@ -21,7 +21,7 @@ class Usercontroller extends Controller
         $createUser = User::create([
             'username'=>$request->username,
             'email'=>$request->email,
-            'role' => 'client',
+            'role' => 'super-admin',
             'password'=>Hash::make($request->password)
         ]);
         // $createUser->assignRole('client');
@@ -45,9 +45,13 @@ class Usercontroller extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
-        else if(Auth::attempt($credentials))
+        if(Auth::attempt($credentials)&& auth()->user()->role=='manager')
           {
             return redirect()->intended('/Manager');
+            }
+            if(Auth::attempt($credentials)&& auth()->user()->role=='super-admin')
+          {
+            return redirect()->intended('/Admin');
             }
       else{
         return back()->withErrors([
@@ -67,7 +71,8 @@ public function logout(Request $request)
     public function index(){
 
         $users = User::all();
-        return $users;
+        // return $users;
+        return view('frontend.dashboard.tables.usersTable')->with('user',$users);
         
     }
     
@@ -89,7 +94,9 @@ public function logout(Request $request)
     }
     public function manager(){
         $manager= User::where('role','Manager')->get();
-        return $manager;
+        // return $manager;
+        return view('frontend.dashboard.tables.managerTable')->with('managers',$manager);
+
         
     }
     public function client(){

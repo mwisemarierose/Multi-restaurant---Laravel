@@ -39,6 +39,9 @@ Route::get('/profile', function () {
 Route::get('/Manager', function () {
     return view('frontend.dashboard.manager');
 });
+Route::get('/Admin', function () {
+    return view('frontend.dashboard.admindash');
+});
 // Route::get('/Product', function () {
 //     return view('frontend.dashboard.tables.product');
 // });
@@ -63,6 +66,15 @@ Route::get('/Restaurantform', function () {
 Route::get('/orderform', function () {
     return view('frontend.dashboard.forms.orderform');
 });
+Route::get('/users/managers', function () {
+    return view('frontend.dashboard.tables.managerTable');
+});
+Route::get('/users/clients', function () {
+    return view('frontend.dashboard.tables.usertable');
+});
+Route::get('/users/getAll', function () {
+    return view('frontend.dashboard.tables.usersTable');
+});
 
 
 
@@ -76,6 +88,10 @@ Route::get("/users/clients",[UserController::class, 'client']);
 Route::resource('/users',UserController::class);
 Route::post("/users/login",[UserController::class, 'login']);
 Route::post("/users/store",[UserController::class, 'store']);
+Route::get("/users/getAll",[UserController::class, 'index']);
+
+
+Route::get("/users/managers",[UserController::class, 'manager']);
 
 
 Route::post('/requests/store',[requestsController::class,'store']);
