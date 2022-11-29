@@ -62,7 +62,13 @@
            
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+      @if(!auth()->user())
       <a href="/login" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
+      @else
+      <h6><i class="bi bi-person"></i>{{auth()->user()->email}}</h6>
+
+      <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
+      @endif
 
     </div>
   </header><!-- End Header -->
@@ -72,7 +78,7 @@
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
     <div class="section-title">
-          <p>Our Restaurants</p>
+          <p class="resto">Our Restaurants</p>
         </div>
 
       <div class="container restaurants" data-aos="fade-up">

@@ -58,32 +58,15 @@
       @if(!auth()->user())
       <a href="/login" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
       @else
+      <h6><i class="bi bi-person"></i>{{auth()->user()->email}}</h6>
+
       <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
       @endif
     </div>
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
-      <div class="row">
-        <div class="col-lg-8">
-          <h1>Welcome to <span>FineFood</span></h1>
-          <h2>We cooperate with many Restaurants to serve you delicious foods!</h2>
-
-          <div class="btns">
-            <a href="/requests/approved" class="btn-menu animated fadeInUp scrollto">Our Restaurants</a>
-            @if(!auth()->user())
-            <a href="/login" class="btn-book animated fadeInUp scrollto">LogIn</a>
-            @endif
-          </div>
-        </div>
-       
-
-      </div>
-    </div>
-  </section><!-- End Hero -->
+ 
   @yield('content')
 
    <!-- ======= Footer ======= -->

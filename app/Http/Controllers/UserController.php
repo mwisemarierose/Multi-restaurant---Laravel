@@ -21,7 +21,7 @@ class Usercontroller extends Controller
         $createUser = User::create([
             'username'=>$request->username,
             'email'=>$request->email,
-            'role' => 'super-admin',
+            'role' => 'client',
             'password'=>Hash::make($request->password)
         ]);
         // $createUser->assignRole('client');
@@ -45,7 +45,7 @@ class Usercontroller extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
-        if(Auth::attempt($credentials)&& auth()->user()->role=='manager')
+        if(Auth::attempt($credentials)&& auth()->user()->role=='Manager')
           {
             return redirect()->intended('/Manager');
             }

@@ -26,7 +26,7 @@ Route::patch('/requests/reject/{id}', [requestsController::class,'rejectRequest'
 Route::get('/requests/approved',    [requestsController::class,'approvedRequest']);
 Route::get('/requests/store',    [requestsController::class,'store']);
 
-// Route::resource('/requests',requestsController::class);
+Route::resource('/requests',requestsController::class);
 
 Route::get('/menu/getAll',[menuController::class,'findAll']);
 Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
@@ -34,6 +34,9 @@ Route::resource('/menu',menuController::class);
 
 
 Route::resource('/order',orderController::class);
+Route::group(['middleware'=>['auth:sanctum']], function () {
+    Route::delete('/manager',[UserController::class, 'manager']);
+});
 
 // Route::group(['middleware'=>['auth:sanctum','can:delete product']], function () {
 //     Route::delete('/menu/delete/{id}',[menuController::class,'destroy']);
