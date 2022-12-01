@@ -45,7 +45,7 @@ class Usercontroller extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
-        if(Auth::attempt($credentials)&& auth()->user()->role=='manager')
+        if(Auth::attempt($credentials)&& auth()->user()->role=='Manager')
           {
             return redirect()->intended('/Manager');
             }

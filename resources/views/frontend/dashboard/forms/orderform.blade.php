@@ -26,9 +26,6 @@
                 <input type="text" class="form-control" name="Price" placeholder="Restaurant-address" ><br>
                 <textarea name="Description" class="form-control" placeholder="Restaurant-description"></textarea><br>
                 <input type="submit" class="btn btn-primary" value="Print"><br>
-                
-
-
               
               </form>
 

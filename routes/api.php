@@ -26,7 +26,7 @@ Route::patch('/requests/reject/{id}', [requestsController::class,'rejectRequest'
 Route::get('/requests/approved',    [requestsController::class,'approvedRequest']);
 Route::get('/requests/store',    [requestsController::class,'store']);
 
-// Route::resource('/requests',requestsController::class);
+Route::resource('/requests',requestsController::class);
 
 Route::get('/menu/getAll',[menuController::class,'findAll']);
 Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
