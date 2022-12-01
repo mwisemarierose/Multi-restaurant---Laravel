@@ -34,6 +34,9 @@ Route::resource('/menu',menuController::class);
 
 
 Route::resource('/order',orderController::class);
+Route::group(['middleware'=>['auth:sanctum']], function () {
+    Route::delete('/manager',[UserController::class, 'manager']);
+});
 
 // Route::group(['middleware'=>['auth:sanctum','can:delete product']], function () {
 //     Route::delete('/menu/delete/{id}',[menuController::class,'destroy']);

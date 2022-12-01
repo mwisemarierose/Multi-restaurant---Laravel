@@ -1788,3 +1788,21 @@ body {
     margin: 20px;
     width:min-content
   }
+  .buy{
+    position: absolute;
+    right: 0;
+    background-color: #d3af71;
+    font-weight: 800;
+  }
+  .resto{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    background-color: #0c0b09;
+    position: fixed;
+    right: 50%;
+  }
+.order-container{
+  display: flex;
+  width: 40rem;
+}

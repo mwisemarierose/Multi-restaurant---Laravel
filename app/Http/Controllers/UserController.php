@@ -21,7 +21,7 @@ class Usercontroller extends Controller
         $createUser = User::create([
             'username'=>$request->username,
             'email'=>$request->email,
-            'role' => 'super-admin',
+            'role' => 'client',
             'password'=>Hash::make($request->password)
         ]);
         // $createUser->assignRole('client');

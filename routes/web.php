@@ -75,7 +75,13 @@ Route::get('/users/clients', function () {
 Route::get('/users/getAll', function () {
     return view('frontend.dashboard.tables.usersTable');
 });
-
+Route::get('/orderc', function () {
+    return view('frontend.restaurant.order');
+});
+Route::group(['middleware'=>['auth:sanctum']], function () {
+    Route::get('/Manager',[UserController::class,'manager']);
+    
+});
 
 
 
