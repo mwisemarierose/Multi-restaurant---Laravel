@@ -17,19 +17,19 @@ return new class extends Migration
             $table->id();
             $table->string('username');
             $table->string('email')->unique();
+            $table->string('image');
+            $table->string('phoneNumber');
             $table->string('role');
+            $table->unsignedBigInteger('request_id');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->foreign('request_id')->references('id')->on('requests')->onDelete('cascade');
+
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('users');

@@ -16,8 +16,11 @@ class User extends Authenticatable
     protected $fillable = [
         'username',
         'email',
+        'image',
+        'phoneNumber',
         'password',
-        'role'
+        'role',
+        'request_id'
     ];
 
     
@@ -32,8 +35,8 @@ class User extends Authenticatable
     public function menu(){
         return $this-> hasMany(menu::class);
     }
-    // public function order(){
-    //     return $this-> hasMany(order::class);
-    // }
+    public function requests(){
+        return $this-> belongsTo(requests::class);
+    }
     
 }

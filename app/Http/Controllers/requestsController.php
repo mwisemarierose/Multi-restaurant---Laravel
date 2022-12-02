@@ -17,6 +17,7 @@ class requestsController extends Controller
         $createRequests = requests::create([
             'Name'=>$request->Name,
             'Email'=>$request->Email,
+            'phoneNumber'=>$request->phoneNumber,
             'Image' => $imageUrl,
             'Address'=>$request->Address,
             'Description'=>$request->Description,
@@ -97,9 +98,12 @@ class requestsController extends Controller
 
         $createUser = User::create([
             'username'=>$requests->Name,
+            'image' => $requests->Image,
             'email'=>$requests->Email,
+            'phoneNumber'=>$requests->phoneNumber,
             'role' => 'Manager',
-            'password'=>Hash::make($password)
+            'password'=>Hash::make($password),
+            'request_id' =>$requests->id
         ]);
         $createUser->assignRole('Manager');
         $data = [

@@ -53,7 +53,8 @@ class menuController extends Controller
     }
 
     public function getUsermenu($userId){
-       $items = menu::where('user_id',$userId)->get();
-        return $items;
+       $menu = menu::where('user_id',$userId)->get();
+       return view('frontend.restaurant.restaurant_menu')->with('menus',$menu);
+
     }
 }
