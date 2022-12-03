@@ -107,8 +107,10 @@ Route::patch('/requests/reject/{id}', [requestsController::class,'rejectRequest'
 Route::get('/requests/approved',    [requestsController::class,'approvedRequest']);
 // Route::resource('/requests',requestsController::class);
 
+Route::get('/menu/Usermenu/{id}',[menuController::class,'Usermenu']);
 Route::get('/menu/getAll',[menuController::class,'findAll']);
-Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
+// Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
+Route::post('/menu/store',[menuController::class,'store']);
 // Route::resource('/menu',menuController::class);
 
 

@@ -297,7 +297,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/menu">
+            <a href="/menu/getAll">
               <i class="bi bi-circle"></i><span>View Product</span>
             </a>
           </li>

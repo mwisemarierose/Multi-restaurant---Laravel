@@ -57,4 +57,8 @@ class menuController extends Controller
        return view('frontend.restaurant.restaurant_menu')->with('menus',$menu);
 
     }
+    // public function Usermenu($userId){
+    //     $product = menu::where('user_id',$userId)->get();
+    //     return view('frontend.dashboard.tables.product')->with('products',$product);
+    //  }
 }

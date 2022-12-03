@@ -58,6 +58,7 @@
       @if(!auth()->user())
       <a href="/login" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
       @else
+      <!-- <img src="{{auth()->user()->image}}"  alt="Profile"> -->
       <h6><i class="bi bi-person"></i>{{auth()->user()->email}}</h6>
 
       <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
@@ -146,7 +147,7 @@
   <script src="{{URL::asset('assets/vendor/php-email-form/validate.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{asset('assets/js/main.js')}}"></script>
 
 </body>
 

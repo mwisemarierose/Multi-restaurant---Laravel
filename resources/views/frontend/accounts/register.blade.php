@@ -111,7 +111,7 @@
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Phone Number</label>
                       <div class="input-group has-validation">
-                        <input type="text" name="phone" class="form-control" id="yourphone" >
+                        <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" >
                         <div class="invalid-feedback">Please add a phone Number.</div>
                         @error('phone')
                         <div class="text-danger">{{ $message }}</div>

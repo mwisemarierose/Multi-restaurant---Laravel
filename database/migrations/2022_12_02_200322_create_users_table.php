@@ -20,12 +20,12 @@ return new class extends Migration
             $table->string('image');
             $table->string('phoneNumber');
             $table->string('role');
-            $table->unsignedBigInteger('request_id');
+            $table->unsignedBigInteger('requests_id');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->foreign('request_id')->references('id')->on('requests')->onDelete('cascade');
+            $table->foreign('requests_id')->references('id')->on('requests')->onDelete('cascade');
 
         });
     }

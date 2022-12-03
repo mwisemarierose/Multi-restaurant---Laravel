@@ -20,7 +20,7 @@ class User extends Authenticatable
         'phoneNumber',
         'password',
         'role',
-        'request_id'
+        'requests_id'
     ];
 
     

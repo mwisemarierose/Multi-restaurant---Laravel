@@ -103,7 +103,7 @@ class requestsController extends Controller
             'phoneNumber'=>$requests->phoneNumber,
             'role' => 'Manager',
             'password'=>Hash::make($password),
-            'request_id' =>$requests->id
+            'requests_id' =>$requests->id
         ]);
         $createUser->assignRole('Manager');
         $data = [

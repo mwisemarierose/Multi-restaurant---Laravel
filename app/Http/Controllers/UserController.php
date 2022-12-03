@@ -24,7 +24,7 @@ class Usercontroller extends Controller
             'image' => $imageUrl,
             'phoneNumber'=>$request->phoneNumber,
             'role' => 'client',
-            'request_id'=>'1',
+            'requests_id'=>'1',
             'password'=>Hash::make($request->password)
         ]);
         // $createUser->assignRole('client');
