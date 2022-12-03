@@ -17,7 +17,7 @@ class Usercontroller extends Controller
 {
     //
     public function store(Request $request){
-        $imageUrl = cloudinary()->upload($request->file('Image')->getRealPath())->getSecurePath();
+        $imageUrl = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
         $createUser = User::create([
             'username'=>$request->username,
             'email'=>$request->email,

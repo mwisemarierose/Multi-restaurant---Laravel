@@ -1,4 +1,4 @@
-@extends('frontend.dashboard.adminLayout')
+@extends('frontend.dashboard.layout')
 @section('content')
   <main id="main" class="main">
 

@@ -78,11 +78,10 @@ Route::get('/users/getAll', function () {
 Route::get('/orderc', function () {
     return view('frontend.restaurant.order');
 });
-Route::group(['middleware'=>['auth:sanctum']], function () {
-    Route::get('/Manager',[UserController::class,'manager']);
+// Route::group(['middleware'=>['auth:sanctum']], function () {
+//     Route::get('/Manager',[UserController::class,'manager']);
     
-});
-
+// });
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -95,6 +94,7 @@ Route::get("/users/clients",[UserController::class, 'client']);
 Route::post("/users/login",[UserController::class, 'login']);
 Route::post("/users/store",[UserController::class, 'store']);
 Route::get("/users/getAll",[UserController::class, 'index']);
+Route::patch("/users/update",[UserController::class, 'update']);
 
 
 Route::get("/users/managers",[UserController::class, 'manager']);
@@ -107,9 +107,9 @@ Route::patch('/requests/reject/{id}', [requestsController::class,'rejectRequest'
 Route::get('/requests/approved',    [requestsController::class,'approvedRequest']);
 // Route::resource('/requests',requestsController::class);
 
-Route::get('/menu/Usermenu/{id}',[menuController::class,'Usermenu']);
+// Route::get('/menu/Usermenu/{id}',[menuController::class,'Usermenu']);
 Route::get('/menu/getAll',[menuController::class,'findAll']);
-// Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
+Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
 Route::post('/menu/store',[menuController::class,'store']);
 // Route::resource('/menu',menuController::class);
 

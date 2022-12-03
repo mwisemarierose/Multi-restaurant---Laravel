@@ -118,8 +118,8 @@
                         @enderror
                       </div>
                     <div class="col-12">
-                      <label for="Image" class="form-label">Image(optional)</label>
-                      <input type="file" name="Image" class="form-control" id="yourEmail" >
+                      <label for="image" class="form-label">Image(optional)</label>
+                      <input type="file" name="image" class="form-control" id="yourEmail" >
                     </div>
                     </div>
 

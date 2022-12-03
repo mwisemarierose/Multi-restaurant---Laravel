@@ -34,12 +34,13 @@
                 <tbody>
                 @foreach($items as $item)
                   <tr>
-                    <th scope="row">{{$item->id}}</th>
+                    <th scope="row">{{$loop->iteration}}</th>
                     <td>{{$item->Title}}</td>
                     <td>{{$item->Description}}</td>
                     <td>{{$item->Price}}</td>
                     <td>{{$item->quantity}}</td>
-                    <td><button class="btn btn-primary">View</button></td>
+                    <td><button class="btn btn-primary" onclick="location.href='/Userform'">View</button></td>
+
 
                   </tr>
                   @endforeach

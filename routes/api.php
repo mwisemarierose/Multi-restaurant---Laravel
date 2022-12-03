@@ -30,7 +30,7 @@ Route::get('/requests/store',    [requestsController::class,'store']);
 
 Route::get('/menu/getAll',[menuController::class,'findAll']);
 Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
-Route::get('/menu/Usermenu/{id}',[menuController::class,'Usermenu']);
+// Route::get('/menu/Usermenu/{id}',[menuController::class,'Usermenu']);
 Route::post('/menu/store',[menuController::class,'store']);
 // Route::resource('/menu',menuController::class);
 
