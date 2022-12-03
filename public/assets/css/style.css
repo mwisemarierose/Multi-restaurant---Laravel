@@ -1804,5 +1804,18 @@ body {
   }
 .order-container{
   display: flex;
-  width: 40rem;
+  width: 30rem;
+  flex-direction: column;
+}
+.order-image{
+  margin-right: 20px;
+}
+.internal{
+  display: flex;
+
+}
+.inputs input{
+  margin-top: 30px;
+  background-color: transparent;
+  border: none;
 }
