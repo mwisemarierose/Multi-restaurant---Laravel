@@ -24,14 +24,14 @@
 
         <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
         
-          @foreach($items as $item)
+          @foreach($menus as $menus)
           <div class="col-lg-6 menu-item filter-specialty">
-            <img src="{{$item->Image}}" class="menu-img" alt="">
+            <img src="{{$menus->Image}}" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">{{$item->Title}}</a><span>{{$item->Price}}</span>
+              <a href="#">{{$menus->Title}}</a><span>{{$menus->Price}}</span>
             </div>
             <div class="menu-ingredients">
-             {{$item->Description}}
+             {{$menus->Description}}
             </div>
             <div>
               <button class="btn buy">buy</button>

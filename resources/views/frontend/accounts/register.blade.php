@@ -108,6 +108,20 @@
                         @enderror
                     </div>
                     </div>
+                    <div class="col-12">
+                      <label for="yourUsername" class="form-label">Phone Number</label>
+                      <div class="input-group has-validation">
+                        <input type="text" name="phone" class="form-control" id="yourphone" >
+                        <div class="invalid-feedback">Please add a phone Number.</div>
+                        @error('phone')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                      </div>
+                    <div class="col-12">
+                      <label for="Image" class="form-label">Image(optional)</label>
+                      <input type="file" name="Image" class="form-control" id="yourEmail" >
+                    </div>
+                    </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>

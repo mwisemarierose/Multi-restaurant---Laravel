@@ -90,14 +90,14 @@
           
             <div class="box" data-aos="zoom-in" data-aos-delay="100">
            
-              <span>{{$restaurant->id}}</span>
+              <span></span>
               <div class="resto-photo"> 
               <img src="{{$restaurant->Image}}" class="menu-img" alt="">
               </div>
               <h3>{{$restaurant->Name}}</h3>
               <h4>{{$restaurant->Address}}</h4>
               <p>{{$restaurant->Description}}</p>
-               <a href="/menu" class="book-a-table-btn scrollto d-none d-lg-flex" style="width:fit-content; margin-top:30px;">Menu</a>
+               <a href="/menu/getUsermenu/{{$restaurant->users->id}}" class="book-a-table-btn scrollto d-none d-lg-flex" style="width:fit-content; margin-top:30px;">Menu</a>
                
             </div>
             

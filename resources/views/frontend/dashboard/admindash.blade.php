@@ -13,9 +13,9 @@
     </div>
 
             </div>
-          </div><!-- End News & Updates -->
+          </div>
 
-        </div><!-- End Right side columns -->
+        </div>
 
       </div>
     </section>

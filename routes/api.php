@@ -14,26 +14,26 @@ Route::middleware('auth:sanctum','can:delete')->get('/user', function (Request $
 });
 
 Route::get("/users/logout",[UserController::class, 'logout']);
-
+Route::patch("/users/update",[UserController::class, 'update']);
 Route::post("/users/store",[UserController::class, 'store']);
 Route::post("/users/login",[UserController::class, 'login']);
 Route::get("/users/managers",[UserController::class, 'manager']);
 Route::get("/users/clients",[UserController::class, 'client']);
-Route::resource('/users',UserController::class);
+// Route::resource('/users',UserController::class);
 
 Route::patch('/requests/approve/{id}',[requestsController::class,'approveRequest']);
 Route::patch('/requests/reject/{id}', [requestsController::class,'rejectRequest']);
 Route::get('/requests/approved',    [requestsController::class,'approvedRequest']);
 Route::get('/requests/store',    [requestsController::class,'store']);
 
-Route::resource('/requests',requestsController::class);
+// Route::resource('/requests',requestsController::class);
 
 Route::get('/menu/getAll',[menuController::class,'findAll']);
 Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
-Route::resource('/menu',menuController::class);
+// Route::resource('/menu',menuController::class);
 
 
-Route::resource('/order',orderController::class);
+Route::post('/order',[orderController::class,'store']);
 Route::group(['middleware'=>['auth:sanctum']], function () {
     Route::delete('/manager',[UserController::class, 'manager']);
 });

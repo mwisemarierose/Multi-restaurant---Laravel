@@ -35,12 +35,7 @@
   <!-- Template Main CSS File -->
   <link href="{{URL::asset('css/style.css');}}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: FineFood - v2.4.1
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+ 
 </head>
 
 <body>
@@ -216,14 +211,14 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="{{URL::asset('img/port.jpg');}}" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">MWISENEZA</span>
+            <img src="{{auth()->user()->image}}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{auth()->user()->username}}</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Marie Rose MWISENEZA</h6>
-              <span>Manager</span>
+              <h6>{{auth()->user()->username}}</h6>
+              <span>{{auth()->user()->role}}</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -302,7 +297,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/menu/getAll">
+            <a href="/menu">
               <i class="bi bi-circle"></i><span>View Product</span>
             </a>
           </li>

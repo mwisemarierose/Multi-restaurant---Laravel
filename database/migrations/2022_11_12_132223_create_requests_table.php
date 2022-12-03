@@ -13,6 +13,7 @@ return new class extends Migration
             $table->id();
             $table->string('Name');
             $table->string('Email');
+            $table->string('phoneNumber');
             $table->string('Image');
             $table->string('Address');
             $table->string('Description');

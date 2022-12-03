@@ -17,11 +17,14 @@ class Usercontroller extends Controller
 {
     //
     public function store(Request $request){
-
+        $imageUrl = cloudinary()->upload($request->file('Image')->getRealPath())->getSecurePath();
         $createUser = User::create([
             'username'=>$request->username,
             'email'=>$request->email,
+            'image' => $imageUrl,
+            'phoneNumber'=>$request->phoneNumber,
             'role' => 'client',
+            'request_id'=>'1',
             'password'=>Hash::make($request->password)
         ]);
         // $createUser->assignRole('client');
@@ -45,7 +48,7 @@ class Usercontroller extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
-        if(Auth::attempt($credentials)&& auth()->user()->role=='Manager')
+        if(Auth::attempt($credentials))
           {
             return redirect()->intended('/Manager');
             }

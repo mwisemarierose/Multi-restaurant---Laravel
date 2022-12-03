@@ -8,12 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class requests extends Model
 {
     use HasFactory;
+    protected $table="requests";
     protected $fillable = [
         'Name',
         'Email',
+        'phoneNumber',
         'Image',
         'Address',
         'Description',
         'Status'
     ];
+
+    public function users(){
+        return $this-> hasOne(User::class);
+    }
 }
+

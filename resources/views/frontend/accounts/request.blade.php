@@ -119,6 +119,13 @@
                         @enderror
                     </div>
                     <div class="col-12">
+                      <label for="Description" class="form-label">Phone Number</label>
+                      <input type="text" name="phoneNumber" class="form-control" id="yourEmail" >
+                      @error('Description')
+                        <div class="text" style="position:absolute;top:40px;margin-bottom:10px">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="col-12">
                       <label for="Description" class="form-label">Description</label>
                       <textarea name="Description" class="form-control" id="yourEmail" ></textarea>
                       @error('Description')
