@@ -26,7 +26,7 @@ class menuController extends Controller
 
     public function index(){
         $items = menu::all();
-        return view('frontend.restaurant.restaurant_menu')->with('items',$items);
+        return view('frontend.restaurant.Restaurant_menu')->with('items',$items);
     }
     public function FindAll(){
         $item = menu::where('user_id',auth()->user()->id)->get();
