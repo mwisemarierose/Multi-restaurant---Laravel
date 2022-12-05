@@ -3,11 +3,10 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>All clients</h1>
+      <h1>All Restaurants</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-         
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -18,34 +17,43 @@
 
           <div class="card" style=" width: max-content;">
             <div class="card-body">
-              <h5 class="card-title">User_Table</h5>
+              <h5 class="card-title"> Rejected Restaurants</h5>
               <table class="table table-bordered yajra-datatable">
-              
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Client_name</th>
+                    <th scope="col">Restaurant_name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Role</th>
-                    <th scope="col">Join at</th>
-                    <th scope="col">action</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Request at</th>
+                    <th scope="col">Status</th>
+                    
+
+
                   </tr>
                 </thead>
                 <tbody>
-                @foreach($user as $users)
+                @foreach($rejectedd as $rejected)
                   <tr>
-                    <th scope="row">{{$users->id}}</th>
-                    <td>{{$users->username}}</td>
-                    <td>{{$users->email}}</td>
-                    <td>{{$users->role}}</td>
-                    <td>{{$users->created_at}}</td>
-                    <td><button class="btn btn-primary" onclick="location.href='/Userform'">View</button></td>
+                    <th scope="row">{{$loop->iteration}}</th>
+                    <td>{{$rejected->Name}}</td>
+                    <td>{{$rejected->Email}}</td>
+                    <td>{{$rejected->Address}}</td>
+                    <td>{{$rejected->created_at}}</td>
+                    <td>{{$rejected->Status}}</td>
+                    <!-- <td><select class="form-control" name="" >
+                      <option class="form-control" value="APPROVE">APPROVE</option>
+                       <option class="form-control" value="EJECT">REJECT</option>
+                                  </select></td> -->
 
                   </tr>
                   @endforeach
                 </tbody>
                 
               </table>
+
+             
+              <!-- End Default Table Example -->
             </div>
           </div>
           
@@ -56,9 +64,7 @@
 
         </div>
 
-       
-         
-            </div>
+        
           </div>
 
         </div>
@@ -68,4 +74,5 @@
     </section>
 
   </main><!-- End #main -->
-  
+
+  @endsection

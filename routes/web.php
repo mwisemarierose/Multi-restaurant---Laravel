@@ -45,9 +45,9 @@ Route::get('/Manager', function () {
 // Route::get('/Product', function () {
 //     return view('frontend.dashboard.tables.product');
 // });
-Route::get('/restaurant_table', function () {
-    return view('frontend.dashboard.tables.restaurants');
-});
+// Route::get('/restaurant_table', function () {
+//     return view('frontend.dashboard.tables.restaurants');
+// });
 Route::get('/Order', function () {
     return view('frontend.dashboard.tables.ordertable');
 });
@@ -68,6 +68,9 @@ Route::get('/orderform', function () {
 });
 Route::get('/users/managers', function () {
     return view('frontend.dashboard.tables.managerTable');
+});
+Route::get('/requests/getAll', function () {
+    return view('frontend.dashboard.tables.restaurants');
 });
 Route::get('/users/clients', function () {
     return view('frontend.dashboard.tables.usertable');
@@ -99,14 +102,14 @@ Route::patch("/users/update",[UserController::class, 'update']);
 
 Route::get("/users/managers",[UserController::class, 'manager']);
 
-
+Route::get('/requests/approvedd',    [requestsController::class,'approvedRequests']);
 Route::post('/requests/store',[requestsController::class,'store']);
-
+Route::get('/requests/getAll',[requestsController::class,'index']);
+Route::get('/requests/rejected',    [requestsController::class,'rejectedRequest']);
 Route::patch('/requests/approve/{id}',[requestsController::class,'approveRequest']);
 Route::patch('/requests/reject/{id}', [requestsController::class,'rejectRequest']);
 Route::get('/requests/approved',    [requestsController::class,'approvedRequest']);
 // Route::resource('/requests',requestsController::class);
-
 // Route::get('/menu/Usermenu/{id}',[menuController::class,'Usermenu']);
 Route::get('/menu/getAll',[menuController::class,'findAll']);
 Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);

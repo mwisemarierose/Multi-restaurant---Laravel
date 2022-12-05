@@ -33,21 +33,21 @@
                   </tr>
                 </thead>
                 <tbody>
+                @foreach($requests as $requestss)
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Brandon Jacob</td>
-                    <td>Designer</td>
-                    <td>28</td>
-                    <td>2016-05-25</td>
-                    <td>pending</td>
+                    <th scope="row">{{$loop->iteration}}</th>
+                    <td>{{$requestss->Name}}</td>
+                    <td>{{$requestss->Email}}</td>
+                    <td>{{$requestss->Address}}</td>
+                    <td>{{$requestss->created_at}}</td>
+                    <td>{{$requestss->Status}}</td>
                     <td><select class="form-control" name="" >
-                      <option class="form-control" value="View">View</option>
-                      <option class="form-control" value="Delete">Delete</option>
-                       <option class="form-control" value="Update">Update</option>
+                      <option class="form-control" value="APPROVE">APPROVE</option>
+                       <option class="form-control" value="EJECT">REJECT</option>
                                   </select></td>
 
                   </tr>
-                 
+                  @endforeach
                 </tbody>
                 
               </table>
@@ -57,39 +57,11 @@
             </div>
           </div>
           
-
-         
             </div>
           </div>
 
         </div>
 
-        <div class="col-lg-6" style="padding-left:10px;">
-          <div class="card" style=" width: max-content;">
-            <div class="card-body">
-              <h5 class="card-title">Add Resraurant</h5>
-              <form action="" class="product-form">
-                <input type="text" name="Title" class="form-control" placeholder="Restaurant_name" ><br>
-                <input type="email" class="form-control" name="Quantity" placeholder="Restaurant-email" ><br>
-                <label for="img">Select image:</label><br>
-                <input type="file" accept="image/*" class="form-control-file" style="margin-bottom:10px; " ><br>
-                <input type="text" class="form-control" name="Price" placeholder="Restaurant-address" ><br>
-                <textarea name="Description" class="form-control" placeholder="Restaurant-description"></textarea><br>
-                <input type="submit" class="btn btn-primary" value="Add Restaurants"><br>
-                
-
-
-              
-              </form>
-
-             
-              <!-- End Default Table Example -->
-            </div>
-          </div>
-          
-
-         
-            </div>
           </div>
 
         </div>

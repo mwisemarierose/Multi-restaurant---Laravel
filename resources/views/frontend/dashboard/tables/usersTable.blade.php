@@ -18,7 +18,7 @@
 
           <div class="card" style=" width: max-content;">
             <div class="card-body">
-              <h5 class="card-title">User_Table</h5>
+              <h5 class="card-title">Users_Table</h5>
               <table class="table table-bordered yajra-datatable">
               
                 <thead>
@@ -32,13 +32,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                @foreach($clients as $client)
+                @foreach($user as $users)
                   <tr>
-                    <th scope="row">{{$loop->iteration}}</th>
-                    <td>{{$client->username}}</td>
-                    <td>{{$client->email}}</td>
-                    <td>{{$client->role}}</td>
-                    <td>{{$client->created_at}}</td>
+                    <th scope="row">{{$users->id}}</th>
+                    <td>{{$users->username}}</td>
+                    <td>{{$users->email}}</td>
+                    <td>{{$users->role}}</td>
+                    <td>{{$users->created_at}}</td>
                     <td><button class="btn btn-primary" onclick="location.href='/Userform'">View</button></td>
 
                   </tr>

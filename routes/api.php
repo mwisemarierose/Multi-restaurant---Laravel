@@ -24,7 +24,10 @@ Route::get("/users/clients",[UserController::class, 'client']);
 Route::patch('/requests/approve/{id}',[requestsController::class,'approveRequest']);
 Route::patch('/requests/reject/{id}', [requestsController::class,'rejectRequest']);
 Route::get('/requests/approved',    [requestsController::class,'approvedRequest']);
-Route::get('/requests/store',    [requestsController::class,'store']);
+Route::get('/requests/approvedd',    [requestsController::class,'approvedRequests']);
+Route::get('/requests/rejected',    [requestsController::class,'rejectedRequest']);
+Route::post('/requests/store',    [requestsController::class,'store']);
+Route::get('/requests/getAll',    [requestsController::class,'index']);
 
 // Route::resource('/requests',requestsController::class);
 

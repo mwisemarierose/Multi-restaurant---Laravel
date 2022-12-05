@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Manager_Dashboard</title>
+  <title>Super Admin Dashboard</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -44,7 +44,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="/" class="logo d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center">
         <img src="{{URL::asset('img/logo.png');}}" alt="">
         <span class="d-none d-lg-block">FineFood</span>
       </a>
@@ -211,14 +211,14 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="{{auth()->user()->image}}" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">{{auth()->user()->username}}</span>
+            <img src="{{URL::asset('img/port.jpg');}}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">MWISENEZA</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>{{auth()->user()->username}}</h6>
-              <span>{{auth()->user()->role}}</span>
+              <h6>Marie Rose MWISENEZA</h6>
+              <span>super admin</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -283,10 +283,10 @@
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="/users/clients">
-              <i class="bi bi-circle"></i><span>Users</span>
+              <i class="bi bi-circle"></i><span>Clients</span>
             </a>
            </li>
-           <li>
+          <li>
             <a href="/users/managers">
               <i class="bi bi-circle"></i><span>Managers</span>
             </a>
@@ -301,22 +301,33 @@
         </ul>
       </li><!-- End Components Nav -->
 
-      
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#form-nav" data-bs-toggle="collapse" href="/menu/getAll">
-          <i class="bi bi-house"></i><span>Products</span><i class="bi bi-chevron-down ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-house"></i><span>Restaurants</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="form-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/menu/getAll">
-              <i class="bi bi-circle"></i><span>View Product</span>
+            <a href="forms-elements.html">
+              <i class="bi bi-circle"></i><span>All Restaurants</span>
             </a>
           </li>
-          
+          <li>
+            <a href="forms-layouts.html">
+              <i class="bi bi-circle"></i><span>Pending</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-editors.html">
+              <i class="bi bi-circle"></i><span>Approved</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-validation.html">
+              <i class="bi bi-circle"></i><span>Rejected</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Forms Nav -->
-
-     
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
@@ -324,11 +335,20 @@
         </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/order">
-              <i class="bi bi-circle"></i><span>View Orders</span>
+            <a href="charts-chartjs.html">
+              <i class="bi bi-circle"></i><span>Pending</span>
             </a>
           </li>
-          
+          <li>
+            <a href="charts-apexcharts.html">
+              <i class="bi bi-circle"></i><span>Approved</span>
+            </a>
+          </li>
+          <li>
+            <a href="charts-echarts.html">
+              <i class="bi bi-circle"></i><span>Rejected</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Charts Nav -->
 
@@ -354,33 +374,7 @@
           </li>
         </ul>
       </li><!-- End Icons Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-house"></i><span>Restaurants</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="/requests/getAll">
-              <i class="bi bi-circle"></i><span>All Restaurants</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Pending</span>
-            </a>
-          </li>
-          <li>
-            <a href="/requests/approvedd">
-              <i class="bi bi-circle"></i><span>Approved</span>
-            </a>
-          </li>
-          <li>
-            <a href="/requests/rejected">
-              <i class="bi bi-circle"></i><span>Rejected</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Forms Nav -->
+
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
@@ -408,7 +402,7 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
+  
   <script src="{{asset('assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
   <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('assets/vendor/chart.js/chart.min.js')}}"></script>
@@ -418,7 +412,7 @@
   <script src="{{asset('assets/vendor/tinymce/tinymce.min.js')}}"></script>
   <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
 
-  <!-- Template Main JS File -->
+ 
   <script src="{{asset('assets/js/main.js')}}"></script>
   <script>  
 $('table').DataTable();  

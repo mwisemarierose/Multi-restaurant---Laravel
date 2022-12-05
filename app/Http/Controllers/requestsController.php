@@ -34,11 +34,13 @@ class requestsController extends Controller
     public function index(){
 
         $requestss = requests::all();
-        $res = [
-            'message' => 'Retrieved',
-            'data' => $requestss
-        ];
-        return Response()->json($res, 200);
+        return view('frontend.dashboard.tables.restaurants')->with('requests',$requestss);
+
+        // $res = [
+        //     'message' => 'Retrieved',
+        //     'data' => $requestss
+        // ];
+        // return Response()->json($res, 200);
        
     }
     
@@ -135,9 +137,15 @@ class requestsController extends Controller
         return view('frontend.restaurant.restaurants')->with('restaurants',$approved);
         
     }
+    public function approvedRequests(){
+        $approved= requests::where('Status','Approved')->get();
+        return view('frontend.dashboard.tables.approved')->with('approvedd',$approved);
+        
+    }
     public function rejectedRequest(){
-        $approved= requests::where('Status','Rejected')->get();
-        return $approved;
+        $rejected= requests::where('Status','Rejected')->get();
+        return view('frontend.dashboard.tables.rejected')->with('rejectedd',$rejected);
+
         
     }
     
