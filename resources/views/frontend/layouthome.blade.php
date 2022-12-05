@@ -59,7 +59,9 @@
       <a href="/login" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
       @else
       <h6><i class="bi bi-person"></i>{{auth()->user()->email}}</h6>
-
+      @if(auth()->user()->role='Manager')
+      <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">DashBoard</a>
+      @endif
       <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
       @endif
     </div>

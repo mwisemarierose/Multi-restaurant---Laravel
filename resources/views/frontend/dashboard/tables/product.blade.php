@@ -39,7 +39,13 @@
                     <td>{{$item->Description}}</td>
                     <td>{{$item->Price}}</td>
                     <td>{{$item->quantity}}</td>
-                    <td><button class="btn btn-primary">View</button></td>
+                    <td>
+                      <button class="btn btn-primary" onclick="location.href='/Userform'">View</button>
+                      <button class="btn btn-success" onclick="location.href='/Userform'">Update</button>
+                      <button class="btn btn-danger" onclick="location.href='/Userform'">Delete</button>
+
+                  </td>
+                 
 
                   </tr>
                   @endforeach

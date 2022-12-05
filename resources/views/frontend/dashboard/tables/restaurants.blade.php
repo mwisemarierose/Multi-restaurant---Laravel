@@ -40,11 +40,12 @@
                     <td>28</td>
                     <td>2016-05-25</td>
                     <td>pending</td>
-                    <td><select class="form-control" name="" >
-                      <option class="form-control" value="View">View</option>
-                      <option class="form-control" value="Delete">Delete</option>
-                       <option class="form-control" value="Update">Update</option>
-                                  </select></td>
+                    <td>
+                      <button class="btn btn-primary" onclick="location.href='/Userform'">View</button>
+                      <button class="btn btn-success" onclick="location.href='/Userform'">Update</button>
+                      <button class="btn btn-danger" onclick="location.href='/Userform'">Delete</button>
+
+                  </td>
 
                   </tr>
                  
