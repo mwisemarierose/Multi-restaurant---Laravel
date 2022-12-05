@@ -51,7 +51,6 @@
           <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/requests/approved">Restaurants</a></li>
           <li><a class="nav-link scrollto" href="/request">Request</a></li>
-         
            
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
