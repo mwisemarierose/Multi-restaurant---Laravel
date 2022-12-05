@@ -52,14 +52,24 @@
         <ul>
         <li><a class="nav-link scrollto " href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/requests/approved">Restaurants</a></li>
+          @if(!auth()->user())
+          
           <li><a class="nav-link scrollto active" href="/request">Request</a></li>
-         
+        
+         @endif
          
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      
+      @if(!auth()->user())
       <a href="/login" class="book-a-table-btn scrollto d-none d-lg-flex">LogIn</a>
-
+      @else
+      <!-- <img src="{{auth()->user()->image}}"  alt="Profile"> -->
+      <h6><i class="bi bi-person"></i>{{auth()->user()->email}}</h6>
+      @role('Manager')
+      <a href="/Manager" class="book-a-table-btn scrollto d-none d-lg-flex">DashBoard</a>
+    @endrole
+      <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
+@endif
 
     </div>
   </header><!-- End Header -->

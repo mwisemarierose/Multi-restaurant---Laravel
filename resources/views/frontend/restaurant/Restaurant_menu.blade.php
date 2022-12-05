@@ -34,7 +34,7 @@
              {{$menus->Description}}
             </div>
             <div>
-              <button class="btn buy">buy</button>
+              <button class="btn buy"><a href = "{{url('/menu/getOne/'.$menus->id)}}">buy</></button>
             </div>
           </div>
           @endforeach 

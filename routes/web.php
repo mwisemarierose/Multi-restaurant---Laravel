@@ -114,6 +114,7 @@ Route::get('/requests/approved',    [requestsController::class,'approvedRequest'
 Route::get('/menu/getAll',[menuController::class,'findAll']);
 Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
 Route::post('/menu/store',[menuController::class,'store']);
+Route::get('/menu/getOne/{id}',[menuController::class,'show']);
 // Route::resource('/menu',menuController::class);
 
 

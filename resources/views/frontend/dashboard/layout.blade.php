@@ -270,12 +270,12 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="#">
+        <a class="nav-link " href="/Manager">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
-
+    
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-people"></i><span>User-management</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -286,6 +286,8 @@
               <i class="bi bi-circle"></i><span>Users</span>
             </a>
            </li>
+         
+      @role('super-admin')
            <li>
             <a href="/users/managers">
               <i class="bi bi-circle"></i><span>Managers</span>
@@ -297,11 +299,14 @@
               <i class="bi bi-circle"></i><span>All users</span>
             </a>
           </li>
+          @endrole
          
         </ul>
-      </li><!-- End Components Nav -->
+      </li>
+  
+    <!-- End Components Nav -->
 
-      
+      @role('Manager')
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#form-nav" data-bs-toggle="collapse" href="/menu/getAll">
           <i class="bi bi-house"></i><span>Products</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -315,7 +320,7 @@
           
         </ul>
       </li><!-- End Forms Nav -->
-
+@endrole
      
 
       <li class="nav-item">
@@ -353,7 +358,8 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Icons Nav -->
+      </li>
+      @role('super-admin')<!-- End Icons Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-house"></i><span>Restaurants</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -380,7 +386,8 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Forms Nav -->
+      </li>
+      @endrole<!-- End Forms Nav -->
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
@@ -409,17 +416,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{{asset('assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/chart.js/chart.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/echarts/echarts.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/quill/quill.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/simple-datatables/simple-datatables.js')}}"></script>
-  <script src="{{asset('assets/vendor/tinymce/tinymce.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{URL::asset('vendor/apexcharts/apexcharts.min.js')}}"></script>
+  <script src="{{URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{URL::asset('vendor/chart.js/chart.min.js')}}"></script>
+  <script src="{{URL::asset('vendor/echarts/echarts.min.js')}}"></script>
+  <script src="{{URL::asset('vendor/quill/quill.min.js')}}"></script>
+  <script src="{{URL::asset('vendor/simple-datatables/simple-datatables.js')}}"></script>
+  <script src="{{URL::asset('vendor/tinymce/tinymce.min.js')}}"></script>
+  <script src="{{URL::asset('vendor/php-email-form/validate.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{asset('assets/js/main.js')}}"></script>
+  <script src="{{URL::asset('js/main.js')}}"></script>
   <script>  
 $('table').DataTable();  
 </script>  

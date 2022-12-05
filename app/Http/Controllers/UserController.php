@@ -23,11 +23,11 @@ class Usercontroller extends Controller
             'email'=>$request->email,
             'image' => $imageUrl,
             'phoneNumber'=>$request->phoneNumber,
-            'role' => 'client',
+            'role' => 'super-admin',
             'requests_id'=>'1',
             'password'=>Hash::make($request->password)
         ]);
-        // $createUser->assignRole('client');
+        $createUser->assignRole('super-admin');
         // $data = [
         //     'subject'=>'Electronics shop mail',
         //     'body'=>'this is the email test'
@@ -48,7 +48,7 @@ class Usercontroller extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
-        if(Auth::attempt($credentials))
+        if(Auth::attempt($credentials) && auth()->user()->role=='Manager')
           {
             return redirect()->intended('/Manager');
             }

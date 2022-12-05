@@ -32,6 +32,7 @@ Route::get('/requests/getAll',    [requestsController::class,'index']);
 // Route::resource('/requests',requestsController::class);
 
 Route::get('/menu/getAll',[menuController::class,'findAll']);
+Route::get('/menu/getOne/{id}',[menuController::class,'show']);
 Route::get('/menu/getUsermenu/{id}',[menuController::class,'getUsermenu']);
 // Route::get('/menu/Usermenu/{id}',[menuController::class,'Usermenu']);
 Route::post('/menu/store',[menuController::class,'store']);
