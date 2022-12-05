@@ -51,7 +51,6 @@
           <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/requests/approved">Restaurants</a></li>
           <li><a class="nav-link scrollto" href="/request">Request</a></li>
-         
            
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -60,7 +59,9 @@
       @else
       <!-- <img src="{{auth()->user()->image}}"  alt="Profile"> -->
       <h6><i class="bi bi-person"></i>{{auth()->user()->email}}</h6>
-
+      @role('Manager')
+      <a href="/Manager" class="book-a-table-btn scrollto d-none d-lg-flex">DashBoard</a>
+    @endrole
       <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
       @endif
     </div>

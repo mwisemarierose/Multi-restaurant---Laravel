@@ -55,7 +55,7 @@ class menuController extends Controller
 
     public function getUsermenu($userId){
        $menu = menu::where('user_id',$userId)->get();
-       return view('frontend.restaurant.restaurant_menu')->with('menus',$menu);
+       return view('frontend.restaurant.Restaurant_menu')->with('menus',$menu);
 
     }
     // public function Usermenu($userId){
