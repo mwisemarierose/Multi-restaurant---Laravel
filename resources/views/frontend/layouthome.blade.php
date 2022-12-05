@@ -60,9 +60,9 @@
       @else
       <!-- <img src="{{auth()->user()->image}}"  alt="Profile"> -->
       <h6><i class="bi bi-person"></i>{{auth()->user()->email}}</h6>
-      @if(auth()->user()->role='Manager')
-      <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">DashBoard</a>
-      @endif
+      @role('Manager')
+      <a href="/Manager" class="book-a-table-btn scrollto d-none d-lg-flex">DashBoard</a>
+    @endrole
       <a href="/users/logout" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
       @endif
     </div>
