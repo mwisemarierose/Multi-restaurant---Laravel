@@ -29,10 +29,11 @@ class menuController extends Controller
         return view('frontend.restaurant.Restaurant_menu')->with('items',$items);
     }
     public function FindAll(){
-        $item = menu::all();
+        $item = menu::where('user_id',auth()->user()->id)->get();
         
         return view('frontend.dashboard.tables.product')->with('items',$item);
     }
+    
     
     public function show($id){
         $item = menu::find($id);
@@ -57,4 +58,8 @@ class menuController extends Controller
        return view('frontend.restaurant.Restaurant_menu')->with('menus',$menu);
 
     }
+    // public function Usermenu($userId){
+    //     $product = menu::where('user_id',$userId)->get();
+    //     return view('frontend.dashboard.tables.product')->with('products',$product);
+    //  }
 }

@@ -111,15 +111,15 @@
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Phone Number</label>
                       <div class="input-group has-validation">
-                        <input type="text" name="phone" class="form-control" id="yourphone" >
+                        <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" >
                         <div class="invalid-feedback">Please add a phone Number.</div>
                         @error('phone')
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
                       </div>
                     <div class="col-12">
-                      <label for="Image" class="form-label">Image(optional)</label>
-                      <input type="file" name="Image" class="form-control" id="yourEmail" >
+                      <label for="image" class="form-label">Image(optional)</label>
+                      <input type="file" name="image" class="form-control" id="yourEmail" >
                     </div>
                     </div>
 

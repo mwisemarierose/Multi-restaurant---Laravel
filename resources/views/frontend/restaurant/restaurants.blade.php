@@ -98,7 +98,7 @@
               <h4>{{$restaurant->Address}}</h4>
               <p>{{$restaurant->Description}}</p>
                <a href="/menu/getUsermenu/{{$restaurant->users->id}}" class="book-a-table-btn scrollto d-none d-lg-flex" style="width:fit-content; margin-top:30px;">Menu</a>
-               
+      
             </div>
             
           </div>

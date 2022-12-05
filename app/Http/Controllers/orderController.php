@@ -37,6 +37,9 @@ class OrderController extends Controller
             'message' => 'Order created successfully',
             'data' => $createOrder
         ];
+        $Menu = menu::find($request-> menu_id);
+        $Menu->quantity=$Menu->quantity - $request->quantity;          
+        $Menu-> save();
         return Response()->json($res, 200);
     }
     

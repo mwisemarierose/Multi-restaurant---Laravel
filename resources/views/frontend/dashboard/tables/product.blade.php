@@ -34,26 +34,19 @@
                 <tbody>
                 @foreach($items as $item)
                   <tr>
-                    <th scope="row">{{$item->id}}</th>
+                    <th scope="row">{{$loop->iteration}}</th>
                     <td>{{$item->Title}}</td>
                     <td>{{$item->Description}}</td>
                     <td>{{$item->Price}}</td>
                     <td>{{$item->quantity}}</td>
-                    <td>
-                      <button class="btn btn-primary" onclick="location.href='/Userform'">View</button>
-                      <button class="btn btn-success" onclick="location.href='/Userform'">Update</button>
-                      <button class="btn btn-danger" onclick="location.href='/Userform'">Delete</button>
+                    <td><button class="btn btn-primary" onclick="location.href='/Userform'">View</button></td>
 
-                  </td>
-                 
 
                   </tr>
                   @endforeach
                 </tbody>
-                
-              </table>
 
-             
+              </table>
               <!-- End Default Table Example -->
             </div>
           </div>
@@ -70,7 +63,7 @@
             <div class="card-body">
               <h5 class="card-title">Add Product</h5>
 
-              <form action="{{URL('/menu')}}" method="POST" class="product-form" enctype="multipart/form-data">
+              <form action="{{URL('/menu/store')}}" method="POST" class="product-form" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <input type="hidden" name="user_id" value ="{{auth()->user()->id}}" >
                 <input type="text" name="Title" class="form-control" placeholder="product_name" ><br>

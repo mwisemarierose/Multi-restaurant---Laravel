@@ -44,7 +44,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <img src="{{URL::asset('img/logo.png');}}" alt="">
         <span class="d-none d-lg-block">FineFood</span>
       </a>
@@ -297,7 +297,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="/menu">
+            <a href="/menu/getAll">
               <i class="bi bi-circle"></i><span>View Product</span>
             </a>
           </li>
