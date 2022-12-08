@@ -21,7 +21,7 @@
             <h6 class="name">Price:{{$items->Price}}</h6>
             <!-- <h6 class="name">QTY: {{$items->quantity}} </h6> -->
             <label for="">QTY</label>
-            <input type="number" style="background-color:transparent;border:none" value=1>
+            <input type="number" style="background-color:transparent;border:none;color:white" value=1>
             <h6 class="amount">Amount:</h6>
             </div>
             </div>
