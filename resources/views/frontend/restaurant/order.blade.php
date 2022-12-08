@@ -19,7 +19,10 @@
             <div class="order-content">
             <h4 class="name">Item name : {{$items->Title}}</h4>
             <h6 class="name">Price:{{$items->Price}}</h6>
-            <h6 class="name">QTY: {{$items->quantity}}<i class="bi bi-plus-circle"></i> 1 <i class="bi bi-plus-circle"></i> </h6>
+            <!-- <h6 class="name">QTY: {{$items->quantity}} </h6> -->
+            <label for="">QTY</label>
+            <input type="number" style="background-color:transparent;border:none" value=1>
+            <h6 class="amount">Amount:</h6>
             </div>
             </div>
             </div>
