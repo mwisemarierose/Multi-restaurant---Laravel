@@ -23,11 +23,11 @@ class Usercontroller extends Controller
             'email'=>$request->email,
             'image' => $imageUrl,
             'phoneNumber'=>$request->phoneNumber,
-            'role' => 'super-admin',
+            'role' => 'client',
             'requests_id'=>'1',
             'password'=>Hash::make($request->password)
         ]);
-        $createUser->assignRole('super-admin');
+        $createUser->assignRole('client');
         // $data = [
         //     'subject'=>'Electronics shop mail',
         //     'body'=>'this is the email test'

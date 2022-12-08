@@ -11,7 +11,7 @@
         </ol>
       </nav>
     </div>
-    <section class="section card-container">
+    <!-- <section class="section card-container">
       <div class="row">
     <div class="col-lg-6" style="padding-left:30px;">
           <div class="card" style=" width: max-content;">
@@ -58,7 +58,7 @@
 
         </div>
       </div>
-    </section>
+    </section> -->
 
   </main>
 @endsection

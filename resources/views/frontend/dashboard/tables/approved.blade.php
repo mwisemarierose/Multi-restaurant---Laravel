@@ -3,7 +3,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>All Restaurants</h1>
+      
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -17,7 +17,7 @@
 
           <div class="card" style=" width: max-content;">
             <div class="card-body">
-              <h5 class="card-title"> Rejected Restaurants</h5>
+              <h5 class="card-title"> Approved Restaurants</h5>
               <table class="table table-bordered yajra-datatable">
                 <thead>
                   <tr>
