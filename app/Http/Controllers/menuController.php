@@ -38,7 +38,7 @@ class menuController extends Controller
     public function show($id){
         $item = menu::find($id);
         return view('frontend.restaurant.order')->with('items',$item);
-
+  
     }
 
     public function destroy($id){
